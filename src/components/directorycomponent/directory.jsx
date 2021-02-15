@@ -24,15 +24,30 @@ class Directory extends React.Component {
             id: 3,
           },
           {
+            title: 'Lotion',
+            imageUrl: '/images/sun-bum.jpg',
+            id: 4,
+          },
+          {
+            title: 'Lotion',
+            imageUrl: '/images/sun-bum.jpg',
+            id: 5,
+          },
+          {
+            title: 'Lotion',
+            imageUrl: '/images/sun-bum.jpg',
+            id: 6,
+          },
+          {
             title: 'Body Lotion',
             imageUrl: '/images/amqey-beauty.jpg',
-            id: 4,
+            id: 7,
             size: 'large',
           },
           {
             title: 'Fashion',
             imageUrl: '/images/amqey-phones.jpg',
-            id: 5,
+            id: 8,
             size: 'large',
           },
         ]
