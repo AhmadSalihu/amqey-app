@@ -1,6 +1,7 @@
 body{
   margin-left: 0px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: lightgrey;
 }
 a{
   text-decoration: none;
@@ -10,3 +11,8 @@ a{
 *{
   box-sizing: border-box;
 }
+
+root{
+  width: 100%;
+}
+

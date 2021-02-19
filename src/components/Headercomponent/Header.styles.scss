@@ -1,15 +1,19 @@
 .header {
-  height: 70px;
+  height: 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  flex-shrink: inherit;
+  margin-bottom: 15px;
+  background-color: #f0ca40;
+
 
   .logo-container {
-    height: 100%;
-    width: 70px;
+    height: 30%;
+    width: 30px;
     padding: 25px;
   }
+
 
   .options {
     width: 50%;

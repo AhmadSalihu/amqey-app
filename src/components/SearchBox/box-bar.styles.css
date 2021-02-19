@@ -1,0 +1,18 @@
+box-bar{
+  width: auto;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  align-items: center;
+  width: 60%;
+  line-height: 25px;
+  align-items: center;
+  margin-bottom: 20px;
+}

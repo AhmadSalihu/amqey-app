@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ReactComponent as Logo } from '../../assets/crown.svg';
+import { connect } from 'react-redux'
+// import { ReactComponent as Logo } from '../../assets/crown.svg';
 import { auth } from '../../Firebase/firebase.utils'
 import './Header.styles.scss'
 
-export default function Header({ currentUser }) {
+ const Header = ({ currentUser }) => { 
   return (
     <div className="header">
-      <Link className="logo-container" to='/'>
-        <Logo className="logo" />
+      <Link className="img-logo" to='/'>
+        {/* <img src="https://res.cloudinary.com/amqey/image/upload/eml8mnn6ttb3gqq4pdbn.png" alt="" /> */}
       </Link>
       <div className="options">
       <Link className="option" to='/shop'>
@@ -28,20 +29,12 @@ export default function Header({ currentUser }) {
       }
       </div>
     </div>
-  
+    )
+    }
 
 
-    // <div className="grid-container">
-    // <header>
-    //   <div>
-    //     <img src="/public/images/amqey-logo.png" alt="" />
-    //     <div>
-    //       <a href="/cart">Track Order</a>
-    //       <a href='/sell with us'>Sell With Us</a>
-    //       <a href="/signin">Sign In</a>
-    //     </div>
-    //   </div>
-    // </header>
-    // </div>
-  )
-}
+      const mapStateToProps = state => ({
+        currentUser: state.user.currentUser
+      });
+
+export default connect(mapStateToProps)(Header);
