@@ -7,7 +7,7 @@ import Header from './components/Headercomponent/Header';
 import SHOP from './components/ShopComponent/Shop';
 import HomePage from './Pages/homepage.compponent/homepage';
 import { auth, createUserProfileDocument } from './Firebase/firebase.utils';
-import HomeScreen from './HomeScreen'
+// import HomeScreen from './HomeScreen'
 import { setCurrentUser } from './redux-store/user/user.actions';
 import SignInAndSignOutPage from './Pages/sign-in-sign-up';
 
@@ -20,14 +20,13 @@ class App extends React.Component {
   //   console.log(event.target.value)
   // };
   
-  unsubscribeFromAuth = null
+  unsubscribeFromAuth = null;
   
   componentDidMount() {
     const {setCurrentUser} = this.props;
-   this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+   this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => { 
     if (userAuth) {
       const userRef = await createUserProfileDocument(userAuth);
-
 
       userRef.onSnapshot(snapShot => {
         setCurrentUser({
@@ -36,15 +35,13 @@ class App extends React.Component {
        }); 
       });
     }
-    setCurrentUser(userAuth)
+      setCurrentUser(userAuth) 
     })
   }
 
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
-
-
 
 
   render() { 
@@ -58,11 +55,10 @@ class App extends React.Component {
         <Header /> 
         <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/"  component={HomeScreen} />
         <Route  path="/Shop" component={SHOP} />
         <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect />
         ) : (
-         <SignInAndSignOutPage />) } />
+         <SignInAndSignOutPage />)} />
         </Switch>
         <Footer />
       </div>

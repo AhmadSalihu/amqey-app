@@ -12,12 +12,13 @@ const config = {
   measurementId: "G-3Q5LKHKHSW"
 };
 
-export const createUserProfileDocument = async (userAuth, additionalData) => {
-  if (!userAuth) return;
-  const userRef = firestore.doc(`Ahmad/${userAuth.uid}`);
+export const createUserProfileDocument = async (userAuth,additionalData) => {
+  if (!userAuth)
+    return;
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
   const snapShot = await userRef.get();
-  console.log(snapShot)
-  if(!snapShot.exists) {
+
+  if (!snapShot.exists) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
     try {
