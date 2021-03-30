@@ -1,26 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import { auth } from '../../Firebase/firebase.utils'
-import './Header.styles.scss'
+
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+
+
+import './Header.styles.scss'
+
+
  const Header = ({ currentUser, hidden }) => { 
   return (
-    <div className="header">
+    <div className="header color-white">
       <Link className="img-logo" to='/'>
        <Logo className='logo' /> 
       </Link>
       <div className="options">
       <Link className="option" to='/shop'>
-        SHOP
-      </Link>
-      <Link className="option" to='/trackorder'>
-      TrackOrder
+        Shop
       </Link>
       <Link className="option" to='/sell with us'>
-        Sell Wiht Us
+        Sell On Lumo
       </Link> 
       {
         currentUser ? (

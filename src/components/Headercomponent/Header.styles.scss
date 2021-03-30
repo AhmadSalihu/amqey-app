@@ -6,6 +6,8 @@
   flex-shrink: inherit;
   margin-bottom: 15px;
   background-color: #f8c408;
+  color: rgb(44, 56, 220);
+  font-family: Open Sans Condensed;
   box-shadow: 10rem rgba(0,0,0,.075) !important;
 
 
@@ -22,11 +24,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
+    
     .option {
       padding: 10px 15px;
       cursor: pointer;
-
     }
   }
 }

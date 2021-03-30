@@ -3,7 +3,7 @@
 
 	if (existingCartItem) {
 		return cartItems.map(cartItem => 
-			cartItem.id === itemToAddToCart
+			cartItem.id === itemToAddToCart.id
 				? { ...cartItem, quantity: cartItem.quantity + 1  }
 				: cartItem
 			)

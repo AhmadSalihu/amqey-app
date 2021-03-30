@@ -9,7 +9,7 @@ body{
   margin-right: 0px;
   height: 100vh;
   font-size: 1.6rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Open Sans Condensed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,6 +28,7 @@ body{
 header{
   grid-area: header;
   background-color: #203040;
+  color: #ffffff;
   display: flex;
   justify-content: flex-end;
 }

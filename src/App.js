@@ -10,6 +10,7 @@ import { auth, createUserProfileDocument } from './Firebase/firebase.utils';
 // import HomeScreen from './HomeScreen'
 import { setCurrentUser } from './redux-store/user/user.actions';
 import SignInAndSignOutPage from './Pages/sign-in-sign-up';
+import CheckoutPage from './Pages/homepage.compponent/checkout-page/checkout-page';
 
  
 
@@ -34,6 +35,8 @@ class App extends React.Component {
          ...snapShot.data()
        }); 
       });
+      console.log(this.props.setCurrentUser);
+      console.log(setCurrentUser);
     }
       setCurrentUser(userAuth) 
     })
@@ -56,7 +59,8 @@ class App extends React.Component {
         <Switch>
         <Route exact path="/" component={HomePage} />
         <Route  path="/Shop" component={SHOP} />
-        <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect />
+        <Route  path="/checkout" component={CheckoutPage} />
+        <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/'  />
         ) : (
          <SignInAndSignOutPage />)} />
         </Switch>
