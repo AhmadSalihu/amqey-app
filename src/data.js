@@ -1,7 +1,7 @@
 export const data = 
  [
    {
-     _id: 2,
+     _id: 1,
      name: 'Sun Bum',
      category: "Body lotion",
      image: '/amqey-images/sun-bum-shine.jpg',

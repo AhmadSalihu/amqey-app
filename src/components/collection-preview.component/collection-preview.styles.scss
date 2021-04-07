@@ -6,8 +6,15 @@
   margin-bottom: 30px;
 
   .title {
+    
     font-size: 28px;
+    padding: 5px 10px;
     margin-bottom: 25px;
+  }
+  .see-all{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
   }
 
   .preview {

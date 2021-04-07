@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
@@ -8,42 +7,44 @@ import { auth } from '../../Firebase/firebase.utils'
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
-
-import './Header.styles.scss'
+import { HeaderContainer, LogoContainer, OptionLink, OptionsContainer } from './Header.styles.jsx';
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from '../../redux-store/user/user.selector';
+import { selectCartHidden } from '../../redux-store/cart/cart.selectors';
 
 
  const Header = ({ currentUser, hidden }) => { 
   return (
-    <div className="header color-white">
-      <Link className="img-logo" to='/'>
+    <HeaderContainer>
+      <LogoContainer to='/'>
        <Logo className='logo' /> 
-      </Link>
-      <div className="options">
-      <Link className="option" to='/shop'>
+      </LogoContainer>
+      <OptionsContainer>
+      <OptionLink to='/shop'>
         Shop
-      </Link>
-      <Link className="option" to='/sell with us'>
-        Sell On Lumo
-      </Link> 
+      </OptionLink>
+      <OptionLink to='/sell with us'>
+        Sell On Amqey
+      </OptionLink> 
       {
         currentUser ? (
-        <div className="option" onClick={() => auth.signOut()}>Sign Out</div>   
+        <OptionLink  as='div' onClick={() => auth.signOut()}>Sign Out</OptionLink>   
         ) : (
-        <Link className="option" to='/signin'>Sign In</Link>
+        <OptionLink to='/signin'>Sign In</OptionLink>
             )}
         <CartIcon />
-      </div>
+      </OptionsContainer>
       {
         hidden ? null : <CartDropdown />
       }
-    </div>
+    </HeaderContainer>
     )
     }
 
 
-const mapStateToProps = ({user: { currentUser }, cart:  { hidden }}) => ({
-  currentUser,
-  hidden
-      });
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
+});
 
 export default connect(mapStateToProps)(Header);

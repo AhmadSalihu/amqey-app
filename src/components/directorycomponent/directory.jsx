@@ -5,19 +5,19 @@ import { createStructuredSelector } from 'reselect';
 import { selectDirectorySections } from '../../redux-store/directory/directory.selector';
 
 import MenuItem from '../menu-item.component/menu-item';
+import { HomepageContainer } from './directory.styles';
 
 
-import './directory.styles.scss';
 
 // onClick={() => history.push(`${match.url}${linkUrl}`)}
 
 const Directory = ({ sections }) => {
   return (
-    <div className="directory-menu">
+    <HomepageContainer>
       {sections.map(({ id, ...otherSectionpProps }) => (
         <MenuItem key={id} {...otherSectionpProps} />
       ))}
-    </div>
+    </HomepageContainer>
   )
 }
 
