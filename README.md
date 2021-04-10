@@ -10,4 +10,4 @@ In the project site, you can sign in either using google pop_up or using email a
   from the cart, and then proceed to payment using stripe.
 
 ### Since this app is still in the process,  we are usign stripe fake card number which is 
-`4242 4242 4242 4242`and then any future date Exp: data, plus  any three digit number for CV
+`4242 4242 4242 4242`  Exp: date: 06/22, and put any three digit number for CVV
