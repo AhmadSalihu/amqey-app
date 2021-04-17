@@ -14,9 +14,9 @@ import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux-store/user/user.selector';
 import SubHeader from './components/Headercomponent/SubHeader';
 import SubNavigationBar from './components/subnavbar/subnavigation';
-import descriptionPage from './components/description-page/description-page';
 import CustomerRegister from './components/RegisterF/RegisterForm'
 import VendorRegister from './components/RegisterF/customerRegister';
+// import descriptionMapPage from './components/description-page/descriptionMapPage';
  
 
 class App extends React.Component {
@@ -54,7 +54,7 @@ class App extends React.Component {
         <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/Shop" component={Shop} />
-        <Route path='/decriptionpage' component={descriptionPage} />  
+        {/* <Route path='/decriptionpage' component={descriptionMapPage} />   */}
         <Route  path="/checkout" component={CheckoutPage} />
         <Route  path="/vendor" component={VendorRegister} />
         <Route path="/customer" component={CustomerRegister} />

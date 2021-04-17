@@ -1,24 +1,25 @@
 import React from 'react';
 
-const DescriptionPage = () => {
+
+const DescriptionPage = ({ item: { imageUrl, price, name }  }) => {
 	return (
 		<>
 					<div  className="row">
 					DescriptionPage
 						<div className="col-2">
-							<img src='/' alt="" />
+							<img src={imageUrl} alt="" />
 						</div>
 						<div className="col-1">
 							<ul>
 								<li>
-									<h1>ProductName</h1>
+									<h1>{name}</h1>
 								</li>
 							</ul>
 						</div>
 						<div className="col-1">
 							<ul>
 								<li>
-									<h1>Product price</h1>
+									<h1>{price}</h1>
 								</li>
 							</ul>
 						</div>
@@ -29,4 +30,4 @@ const DescriptionPage = () => {
 
 
 
-export default DescriptionPage
+export default DescriptionPage;
