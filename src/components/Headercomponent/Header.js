@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { ReactComponent as Logo } from '../../assets/crown.svg';
+// import { ReactComponent as Logo } from '../../assets/crown.svg';
 import { auth } from '../../Firebase/firebase.utils'
 
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
-import { HeaderContainer, LogoContainer, OptionLink, OptionsContainer } from './Header.styles.jsx';
+import { HeaderContainer, LogoContainer, OptionLink, OptionsContainer, LogoImage } from './Header.styles.jsx';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from '../../redux-store/user/user.selector';
 import { selectCartHidden } from '../../redux-store/cart/cart.selectors';
@@ -17,7 +17,7 @@ import { selectCartHidden } from '../../redux-store/cart/cart.selectors';
   return (
     <HeaderContainer>
       <LogoContainer to='/'>
-       <Logo className='logo' /> 
+       <LogoImage src='/favicon.ico.png' alt="" className='logo' /> 
       </LogoContainer>
       <OptionsContainer>
       <OptionLink to='/shop'>

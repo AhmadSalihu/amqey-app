@@ -6,6 +6,9 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { store, persistor } from './redux-store/store';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 import './index.css';
 

@@ -201,10 +201,10 @@ const SHOP_DATA = {
       }
     ]
   },
-  mens: {
+  restaurant: {
     id: 5,
-    title: 'Mens',
-    routeName: 'mens',
+    title: 'Restaurant',
+    routeName: 'restaurant',
     items: [
    {
         id: 30,
@@ -243,7 +243,215 @@ const SHOP_DATA = {
         price: 25
       }
     ]
-  }
+  },
+  mens: {
+    id: 6,
+    title: 'Mens',
+    routeName: 'mens',
+    items: [
+   {
+        id: 31,
+        name: 'Camo Down Vest',
+        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        price: 325
+      },
+      {
+        id: 32,
+        name: 'Floral T-shirt',
+        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+        price: 20
+      },
+      {
+        id: 33,
+        name: 'Black & White Longsleeve',
+        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+        price: 25
+      },
+      {
+        id: 34,
+        name: 'Pink T-shirt',
+        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+        price: 25
+      },
+      {
+        id: 35,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 36,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      }
+    ]
+  },
+  cosmetics: {
+    id: 7,
+    title: 'Cosmetics',
+    routeName: 'cosmetics',
+    items: [
+   {
+        id: 37,
+        name: 'Camo Down Vest',
+        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        price: 325
+      },
+      {
+        id: 38,
+        name: 'Floral T-shirt',
+        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+        price: 20
+      },
+      {
+        id: 39,
+        name: 'Black & White Longsleeve',
+        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+        price: 25
+      },
+      {
+        id: 40,
+        name: 'Pink T-shirt',
+        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+        price: 25
+      },
+      {
+        id: 41,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 42,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      },
+      {
+        id: 43,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 44,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      }
+    ]
+  },
+  mobile_phone: {
+    id: 8,
+    title: 'Mobile Phones',
+    routeName: 'mobile_phone',
+    items: [
+   {
+        id: 37,
+        name: 'Camo Down Vest',
+        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        price: 325
+      },
+      {
+        id: 38,
+        name: 'Floral T-shirt',
+        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+        price: 20
+      },
+      {
+        id: 39,
+        name: 'Black & White Longsleeve',
+        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+        price: 25
+      },
+      {
+        id: 40,
+        name: 'Pink T-shirt',
+        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+        price: 25
+      },
+      {
+        id: 41,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 42,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      },
+      {
+        id: 43,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 44,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      }
+    ]
+  },
+  fashion: {
+    id: 7,
+    title: 'Fashion',
+    routeName: 'fashion',
+    items: [
+   {
+        id: 37,
+        name: 'Camo Down Vest',
+        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        price: 325
+      },
+      {
+        id: 38,
+        name: 'Floral T-shirt',
+        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+        price: 20
+      },
+      {
+        id: 39,
+        name: 'Black & White Longsleeve',
+        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+        price: 25
+      },
+      {
+        id: 40,
+        name: 'Pink T-shirt',
+        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+        price: 25
+      },
+      {
+        id: 41,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 42,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      },
+      {
+        id: 43,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 44,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      }
+    ]
+  },
 };
 
 export default SHOP_DATA;

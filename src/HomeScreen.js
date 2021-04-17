@@ -16,3 +16,11 @@ export default function HomeScreen() {
     </div>
   )
 }
+
+		// <Carousel>
+		// <Carousel.Item interval={7000}>
+		// </Carousel.Item>
+		// 	</Carousel>  
+
+
+

@@ -8,9 +8,6 @@ import MenuItem from '../menu-item.component/menu-item';
 import { HomepageContainer } from './directory.styles';
 
 
-
-// onClick={() => history.push(`${match.url}${linkUrl}`)}
-
 const Directory = ({ sections }) => {
   return (
     <HomepageContainer>

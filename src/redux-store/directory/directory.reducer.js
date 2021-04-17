@@ -23,29 +23,33 @@ const INITIAL_STATE = {
 			imageUrl: '/amqey-images/accessories.jpg',
 			id: 4,
 			linkUrl: 'shop/womens'
-
+			
 		},
 		{
-			title: 'Hair Oil',
+			title: 'fashion',
 			imageUrl: '/amqey-images/hair-oil.png',
 			id: 5,
+			linkUrl: 'shop/fashion'
 		},
 		{
-			title: 'Beaty',
+			title: 'restaurant',
 			imageUrl: '/amqey-images/felge.jpg',
 			id: 6,
+			linkUrl: 'shop/restaurant'
 		},
 		{
-			title: 'Make-up Kits',
+			title: 'cosmetics',
 			imageUrl: '/amqey-images/face-make-up.jpg',
 			id: 7,
 			size: 'large',
+			linkUrl: 'shop/cosmetics'
 		},
 		{
 			title: 'Mobile Phones',
 			imageUrl: '/amqey-images/amqey-phones.jpg',
 			id: 8,
 			size: 'large',
+			linkUrl: 'shop/mobile_phone'
 		},
 	]
 };

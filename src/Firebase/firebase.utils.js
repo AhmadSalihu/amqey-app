@@ -46,8 +46,7 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
   objectsToAdd.forEach(obj => {
     const newDocRef = collectionRef.doc();
     batch.set(newDocRef, obj);
-  });
-
+  }); 
   
   return await batch.commit();
 };
@@ -62,7 +61,7 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
         items
       };
     });
-
+    console.log(transformedCollection)
     return transformedCollection.reduce((accumulator, collection) => {
       accumulator[collection.title.toLowerCase()] = collection;
       return accumulator

@@ -15,7 +15,7 @@ const StripeCheckoutButton = ({ price }) => {
 			currency="NGN"
 			billingAddress
 			shippingAddress 
-			image='/amqey-logo.png'
+			image='/favicon.ico'
 			description={`Your total is ₦${price}`}
 			amount={priceForStripe}
 			panelLabel='Pay Now'

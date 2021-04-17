@@ -7,13 +7,16 @@ import Header from './components/Headercomponent/Header';
 import Shop from './components/ShopComponent/Shop';
 import HomePage from './Pages/homepage.compponent/homepage';
 import { auth, createUserProfileDocument } from './Firebase/firebase.utils';
-// import HomeScreen from './HomeScreen'
 import { setCurrentUser } from './redux-store/user/user.actions';
 import SignInAndSignOutPage from './Pages/sign-in-sign-up';
 import CheckoutPage from './Pages/homepage.compponent/checkout-page/checkout-page';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux-store/user/user.selector';
-
+import SubHeader from './components/Headercomponent/SubHeader';
+import SubNavigationBar from './components/subnavbar/subnavigation';
+import descriptionPage from './components/description-page/description-page';
+import CustomerRegister from './components/RegisterF/RegisterForm'
+import VendorRegister from './components/RegisterF/customerRegister';
  
 
 class App extends React.Component {
@@ -45,11 +48,16 @@ class App extends React.Component {
   render() { 
     return (
       <div> 
-        <Header  /> 
+        <Header />
+        <SubNavigationBar />
+        <SubHeader />
         <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route  path="/Shop" component={Shop} />
+        <Route path="/Shop" component={Shop} />
+        <Route path='/decriptionpage' component={descriptionPage} />  
         <Route  path="/checkout" component={CheckoutPage} />
+        <Route  path="/vendor" component={VendorRegister} />
+        <Route path="/customer" component={CustomerRegister} />
         <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/' />
         ) : (
          <SignInAndSignOutPage />)} />
@@ -65,7 +73,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
+  setCurrentUser: user => dispatch(setCurrentUser(user)),
 });
 
 export default connect(

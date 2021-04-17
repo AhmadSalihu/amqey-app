@@ -34,3 +34,7 @@ export const OptionLink = styled(Link)`
   cursor: pointer;
 `;
 
+export const LogoImage = styled.img`
+   width: 100px;
+   height: 50px;
+`
