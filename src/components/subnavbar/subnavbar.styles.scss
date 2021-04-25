@@ -2,13 +2,16 @@
 	height: 50px;
   width: auto;
   display: flex;
-	justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   flex-shrink: inherit;
 	margin: 0px;
 	padding: 0%;
   margin-bottom: 0px;
   background-color: #002369;
 	text-shadow: 5em;
+	font-size: 1.3rem;
   box-shadow: 10rem rgba(0,0,0,.075) !important;
 
 }
@@ -21,4 +24,15 @@ ul li{
 ul li a:hover{
 	text-decoration: none;
 	color: aliceblue;
+}
+
+.all-category{
+ color: aliceblue;
+ cursor: pointer;
+ margin-left: -35px;
+
+}
+
+.all-category :hover{
+ color:#ff8000;
 }

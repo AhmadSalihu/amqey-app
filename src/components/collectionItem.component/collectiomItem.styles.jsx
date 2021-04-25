@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import CustomButton from '../custom-button.component/CustomButton';
 
 export const CollectionItemContainer = styled.div`
+  display: flex;
   width: 22vw;
   display: flex;
   flex-direction: column;
@@ -14,19 +15,24 @@ export const CollectionItemContainer = styled.div`
     }
     button {
       opacity: 0.85;
-      display: flex;
     }
   }
 `;
+export const PriceAndAddToCart = styled(CustomButton)`
 
+`
 export const AddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
   position: absolute;
   top: 255px;
-  display: none;
 `;
+export const PriceButton = styled(CustomButton)`
+  width: 60%;
+  position: absolute;
+  top: 200px;
 
+`
 export const BackgroundImage = styled.div`
   width: 100%;
   height: 95%;

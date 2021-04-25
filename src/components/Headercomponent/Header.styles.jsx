@@ -1,19 +1,23 @@
 import styled from 'styled-components';
-import{ Link} from 'react-router-dom';
-
+import{ Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
   height: 40px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   flex-shrink: inherit;
   margin-bottom: 15px;
   background-color: #f8c408;
-  color: rgb(44, 56, 220);
+  color: black;
   font-family: Open Sans Condensed;
-  box-shadow: 10rem rgba(0,0,0,.075) !important;
 `;
+
+export const SignInAndRegisterContainer = styled(Link)`
+  justify-content: space-around
+`
   
 export const LogoContainer = styled(Link)`
     height: 30%;
@@ -28,7 +32,7 @@ export const OptionsContainer = styled.div`
   align-items: center;
   justify-content: flex-end;  
 `;
- 
+    
 export const OptionLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
@@ -37,4 +41,12 @@ export const OptionLink = styled(Link)`
 export const LogoImage = styled.img`
    width: 100px;
    height: 50px;
+`
+
+export const SubHeaderComponentStyle = styled.div`
+  display: flex;
+ ${'' /* width: 850px;
+ display: flex;
+ justify-content: space-between;
+ margin: 30px auto; */}
 `

@@ -1,7 +1,9 @@
 import React from 'react';
 
 
-const DescriptionPage = ({ item: { imageUrl, price, name }  }) => {
+const DescriptionPage = ({ item }) => {
+	const { imageUrl, price, name } = item
+	console.log(item)
 	return (
 		<>
 					<div  className="row">
@@ -27,7 +29,6 @@ const DescriptionPage = ({ item: { imageUrl, price, name }  }) => {
 		</>
 	)
 }
-
 
 
 export default DescriptionPage;

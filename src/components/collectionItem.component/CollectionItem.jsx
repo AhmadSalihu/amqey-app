@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom';
 import { addItem } from '../../redux-store/cart/cart.actions';
+// import DescriptionPage from '../description-page/description-page';
 
 import {
   AddButton,
@@ -9,26 +10,25 @@ import {
   CollectionFooterContainer,
   CollectionItemContainer,
   NameContainer,
-  PriceContainer
+  PriceButton,
 } from './collectiomItem.styles';
 
 
 const CollectionItem = ({ item, addItem, history }) => {
   const { name, price, imageUrl } = item;
-// console.log(addItem)
-// console.log(item)
+console.log(item)
   return (
     <CollectionItemContainer>
       <BackgroundImage className='image' imageUrl={imageUrl} onClick={() => history.push('/decriptionpage')} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
-        <PriceContainer>{price}</PriceContainer>
       </CollectionFooterContainer>
+      <PriceButton>₦25|₦{price}</PriceButton>
       <AddButton onClick={() => addItem(item)} inverted>
         Add to cart
       </AddButton>
     </CollectionItemContainer>
-  );
+  );  
 };
 
 const mapDispatchToProps = dispatch => ({

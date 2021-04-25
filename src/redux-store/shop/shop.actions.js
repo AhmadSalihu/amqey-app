@@ -3,8 +3,8 @@ import shopActionType from "./shop.types"
 
 
 
-export const fetchCollectionStart = () => ({
-	type: shopActionType.FETCH_COLLECTION_FAILURE,
+export const fetchCollectionsStart = () => ({
+	type: shopActionType.FETCH_COLLECTION_START,
 });
 
 export const fetchCollectionSuccess = (collectionMap) => ({
@@ -20,7 +20,7 @@ export const fetchCollectionFailure = (errorMessage) => ({
 export const fetchCollectionAsync = () => {
 	return dispatch => {
 		const collectionRef = firestore.collection('collections')
-		dispatch(fetchCollectionStart());
+		dispatch(fetchCollectionsStart());
 
     collectionRef.get().then(snapshot => {
       const collectionsMap = convertCollectionSnapshotToMap(snapshot)

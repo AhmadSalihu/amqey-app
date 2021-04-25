@@ -1,50 +1,24 @@
 import React from 'react'
-import { connect } from 'react-redux'
-
-// import { ReactComponent as Logo } from '../../assets/crown.svg';
-import { auth } from '../../Firebase/firebase.utils'
-
-import CartIcon from '../cart-icon/cart-icon.component';
-import CartDropdown from '../cart-dropdown/cart-dropdown.component';
-
-import { HeaderContainer, LogoContainer, OptionLink, OptionsContainer, LogoImage } from './Header.styles.jsx';
-import { createStructuredSelector } from 'reselect';
-import { selectCurrentUser } from '../../redux-store/user/user.selector';
-import { selectCartHidden } from '../../redux-store/cart/cart.selectors';
 
 
- const Header = ({ currentUser, hidden }) => { 
+import { HeaderContainer, OptionLink, OptionsContainer, SignInAndRegisterContainer } from './Header.styles.jsx'
+const Header = () => {
   return (
     <HeaderContainer>
-      <LogoContainer to='/'>
-       <LogoImage src='/favicon.ico.png' alt="" className='logo' /> 
-      </LogoContainer>
-      <OptionsContainer>
-      <OptionLink to='/shop'>
-        Shop
+    <SignInAndRegisterContainer>
+    <OptionLink to='/register'>Register</OptionLink>
+    <OptionLink to='/login'>Login</OptionLink>
+    </SignInAndRegisterContainer>
+   <OptionsContainer>
+      <OptionLink to='/tract_order'>
+      Track Order
       </OptionLink>
-      <OptionLink to='/sell with us'>
-        Sell On Amqey
+      <OptionLink to='/sell_with_us'>
+        Sell With Us
       </OptionLink> 
-      {
-        currentUser ? (
-        <OptionLink  as='div' onClick={() => auth.signOut()}>Sign Out</OptionLink>   
-        ) : (
-        <OptionLink to='/signin'>Sign In</OptionLink>
-            )}
-        <CartIcon />
       </OptionsContainer>
-      {
-        hidden ? null : <CartDropdown />
-      }
     </HeaderContainer>
     )
     }
 
-
-const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
-  hidden: selectCartHidden
-});
-
-export default connect(mapStateToProps)(Header);
+export default Header;

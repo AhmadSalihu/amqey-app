@@ -45,11 +45,11 @@ const INITIAL_STATE = {
 			linkUrl: 'shop/cosmetics'
 		},
 		{
-			title: 'Mobile Phones',
+			title: 'Phones',
 			imageUrl: '/amqey-images/amqey-phones.jpg',
 			id: 8,
 			size: 'large',
-			linkUrl: 'shop/mobile_phone'
+			linkUrl: 'shop/phones'
 		},
 	]
 };

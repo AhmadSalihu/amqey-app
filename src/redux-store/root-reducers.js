@@ -16,7 +16,7 @@ import shopReducer from './shop/shop.reducer';
  export const rootReducer = combineReducers({
   user: userReducer,
   cart: cartReducer,
-   directory: directoryReducer,
+  directory: directoryReducer,
   shop: shopReducer
   })
   

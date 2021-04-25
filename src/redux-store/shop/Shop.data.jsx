@@ -342,10 +342,10 @@ const SHOP_DATA = {
       }
     ]
   },
-  mobile_phone: {
+  phones: {
     id: 8,
-    title: 'Mobile Phones',
-    routeName: 'mobile_phone',
+    title: 'Phones',
+    routeName: 'phones',
     items: [
    {
         id: 37,
