@@ -1,15 +1,18 @@
 import React from 'react'
-import SignIn from '../components/sign-in.component/sign-in'
-import SignUp from '../components/sign-up/sign-up.component'
+import SignIn from './sign-in'
+import SignUp from '../sign-up/sign-up.component'
 
-import { SingUpAndSignInComponent } from './sign-in-sign-up.styles.js';
+import { SingUpAndSignInComponent } from '../../Pages/sign-in-sign-up.styles.js';
+import { Paper } from '@material-ui/core';
 
 function SignInAndSignOutPage() {
   return (
+      <Paper>
     <SingUpAndSignInComponent className="sign-in-and-sign-up">
       <SignIn />
       <SignUp />
     </SingUpAndSignInComponent>
+    </Paper>
   ) 
 }
 

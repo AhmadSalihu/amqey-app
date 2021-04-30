@@ -36,6 +36,7 @@ export const OptionsContainer = styled.div`
 export const OptionLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
+  text-Decoration: none;
 `;
 
 export const LogoImage = styled.img`
@@ -44,9 +45,6 @@ export const LogoImage = styled.img`
 `
 
 export const SubHeaderComponentStyle = styled.div`
-  display: flex;
- ${'' /* width: 850px;
- display: flex;
- justify-content: space-between;
- margin: 30px auto; */}
+ width: auto;
+ margin: 0px 0px 0px 0px;
 `

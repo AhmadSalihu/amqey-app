@@ -74,13 +74,13 @@ export function* signInAfterSignUp({ payload: { user, additionalData } }) {
 
 }
 
-export function* signUp({ payload: {  displayName, email, password } }) {
+export function* signUp({ payload: {  displayName, phoneNumber, email, password } }) {
   try { 
     const { user } = yield auth.createUserWithEmailAndPassword(
         email,
         password
     ); 
-    yield put(signUpSuccess({ user, additionalData: { displayName } }))
+    yield put(signUpSuccess({ user, additionalData: { displayName, phoneNumber } }))
   } catch (error) {
     yield put(signUpFailure(error))
   }
@@ -88,15 +88,15 @@ export function* signUp({ payload: {  displayName, email, password } }) {
 
 export function* onGoogleSignInStart() {
   yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle);
-}
+};
 
 export function* onEmailSignInStart() {
   yield takeLatest(UserActionTypes.EMAIL_SIGN_IN_START, signInWithEmail);
-}
+};
 
 export function* onCheckUserSession() {
   yield takeLatest(UserActionTypes.CHECK_USER_SESSION, isUserAuthenticated);
-}
+};
 
 export function* onSignOutStart() {
   yield takeLatest(UserActionTypes.SIGN_OUT_START, signOut);
@@ -104,12 +104,12 @@ export function* onSignOutStart() {
 
 export function* onSignUpStart() {
   yield takeLatest(UserActionTypes.SIGN_UP_START, signUp)
-}
+};
 
 export function* OnSignUpSuccess() {
   yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS, signInAfterSignUp)
   
-}
+};
 
 export function* userSaga() {
   yield all([

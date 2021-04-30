@@ -2,7 +2,8 @@ import UserActionType from "./user-action-type";
 
 const INITIAL_STATE = {
   currentUser: null,
-  error: null
+  error: null,
+  isUserLoading: true
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {

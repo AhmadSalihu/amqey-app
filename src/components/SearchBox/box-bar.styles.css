@@ -6,6 +6,7 @@
   flex-shrink: inherit;
   margin-bottom: 20px;
   box-sizing: border-box;
+  background-color: #ffd000;
 }
 .search-box {
   -webkit-appearance: none;

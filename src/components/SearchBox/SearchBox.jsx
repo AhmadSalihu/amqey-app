@@ -13,8 +13,7 @@ import './box-bar.styles.css';
 //value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
 
 const SearchBox = ({ currentUser, signOutStart }) => {
-  // const [userQuery, setUserQuery] = useState(null);
-  // const [searchQuery, setSearchQuery] = useState([]);
+
   return(
     <div className="search-header">
       <div>

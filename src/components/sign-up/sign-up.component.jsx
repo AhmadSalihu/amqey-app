@@ -14,6 +14,7 @@ class SignUp extends React.Component {
     this.state = {
       displayName: '',
       email: '',
+      phoneNumber: '',
       password: '',
       confirmPassword: ''
     };
@@ -22,13 +23,13 @@ class SignUp extends React.Component {
   handleSubmit = async event => {
     event.preventDefault();
     const { signUpStart } = this.props;
-    const { displayName, email, password, confirmPassword } = this.state;
+    const { displayName, email, phoneNumber, password, confirmPassword } = this.state;
 
     if (password !== confirmPassword) {
       alert("passwords don't match");
       return;
     }
-    signUpStart({ email, password, displayName })
+    signUpStart({ email, phoneNumber, password, displayName })
   };
 
   handleChange = event => {
@@ -36,13 +37,14 @@ class SignUp extends React.Component {
 
     this.setState({ [name]: value });
   };
-
+  
+  
   render() {
-    const { displayName, email, password, confirmPassword } = this.state;
+    const { displayName, email, phoneNumber, password, confirmPassword } = this.state;
     return (
       <SignUpContainer>
         <SignUpTitle>I do not have a account</SignUpTitle>
-        <span>Sign up with your email and password</span>
+        <span>Sign up with your email, phone Number and password</span>
         <form className='sign-up-form' onSubmit={this.handleSubmit}>
           <FormInput
             type='text'
@@ -58,6 +60,14 @@ class SignUp extends React.Component {
             value={email}
             onChange={this.handleChange}
             label='Email'
+            required
+            />
+          <FormInput
+            type='phoneNumber'
+            name='phoneNumber'
+            value={phoneNumber}
+            onChange={this.handleChange}
+            label='Phone Number'
             required
           />
           <FormInput

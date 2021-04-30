@@ -6,17 +6,17 @@ import Footer from './components/footercomponent/Footer';
 import Header from './components/Headercomponent/Header';
 import Shop from './components/ShopComponent/Shop';
 import HomePage from './Pages/homepage.compponent/homepage';
-import SignInAndSignOutPage from './Pages/sign-in-sign-up';
+import SignInAndSignOutPage from './components/sign-in.component/sign-in-sign-up';
 import CheckoutPage from './Pages/homepage.compponent/checkout-page/checkout-page';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux-store/user/user.selector';
 import SubNavigationBar from './components/subnavbar/subnavigation';
-import CustomerRegister from './components/RegisterF/RegisterForm'
-import VendorRegister from './components/RegisterF/customerRegister';
  import { checkUserSession } from './redux-store/user/user.actions'
 import SearchBox from './components/SearchBox/SearchBox';
 import DescriptionPage from './components/description-page/description-page';
 import SubHeaderComponent from './components/Headercomponent/Subheader.component';
+import VendorStepsForm from './components/Vendor-Register-form/vendor-steps.form';
+
 
 
 class App extends React.Component {
@@ -47,11 +47,10 @@ class App extends React.Component {
         <Route path="/Shop" component={Shop} />
         <Route path='/decriptionpage/:id' component={DescriptionPage} />  
         <Route  path="/checkout" component={CheckoutPage} />
-        <Route  path="/vendor" component={VendorRegister} />
-        <Route path="/customer" component={CustomerRegister} />
         <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/' />
         ) : (
-         <SignInAndSignOutPage />)} />
+              <SignInAndSignOutPage />)} />
+        <Route exact path='/vendor' component={VendorStepsForm} />
         </Switch>
         <Footer />
       </div>

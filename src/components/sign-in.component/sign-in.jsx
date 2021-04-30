@@ -9,7 +9,7 @@ import {
   SignInContainer,
   SignInTitle,
   ButtonsBarContainer
-} from './sign-in.styles';
+} from '../sign-in.component/sign-in.styles';
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -36,7 +36,6 @@ class SignIn extends React.Component {
   };
   
   render() {
-    // const { email, password } = this.props;
     const { googleSignInStart } = this.props;
     return (
       <SignInContainer>
