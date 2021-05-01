@@ -1,10 +1,12 @@
 .sub-header{
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin: auto;
 }
-
+img{
+  height: 100%;
+  width: fit-content;
+  width: inherit;
+  width: auto;
+}
 
 
 

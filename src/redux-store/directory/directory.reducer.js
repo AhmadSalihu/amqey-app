@@ -46,10 +46,17 @@ const INITIAL_STATE = {
 		},
 		{
 			title: 'Phones',
-			imageUrl: '/amqey-images/amqey-phones.jpg',
+			imageUrl: '/amheader/amqey-phones.jpg',
 			id: 8,
 			size: 'large',
 			linkUrl: 'shop/phones'
+		},
+		{
+			title: 'Computers',
+			imageUrl: '/amheader/computers.png',
+			id: 8,
+			size: 'large',
+			linkUrl: 'shop/computers'
 		},
 	]
 };

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import CustomButton from '../custom-button.component/CustomButton';
 
 export const CollectionItemContainer = styled.div`
-  display: flex;
   width: 22vw;
   display: flex;
   flex-direction: column;
@@ -15,24 +14,37 @@ export const CollectionItemContainer = styled.div`
     }
     button {
       opacity: 0.85;
+      display: flex;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+      button {
+        opacity: unset;
+      }
     }
   }
 `;
-export const PriceAndAddToCart = styled(CustomButton)`
 
-`
 export const AddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
   position: absolute;
   top: 255px;
-`;
-export const PriceButton = styled(CustomButton)`
-  width: 60%;
-  position: absolute;
-  top: 200px;
+  display: none;
 
-`
+  @media screen and (max-width: 800px) {
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 10px;
+  }
+`;
+
 export const BackgroundImage = styled.div`
   width: 100%;
   height: 95%;

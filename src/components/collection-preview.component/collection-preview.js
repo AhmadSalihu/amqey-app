@@ -1,41 +1,36 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import CollectionItem from '../collectionItem.component/CollectionItem';
-import DescriptionPage from '../description-page/description-page';
-
 
 
 import {
   CollectionPreviewContainer,
   TitleContainer,
   PreviewContainer,
-  ViewAllContainer,
-  CollectionViewAllDivContainer
+  CollectionViewAllContainer,
+  ViewAllContainer
 } from './collection-preview.styles';
 
-const CollectionPreview = ({ title, items, history, match, routeName }) => {
-  console.log(items);
-  return(
+
+
+const CollectionPreview = ({ title, items, history, match, routeName }) => (
   <CollectionPreviewContainer>
-  <CollectionViewAllDivContainer>
+    <CollectionViewAllContainer>
     <TitleContainer>
-      {title.toUpperCase()}
+      {title.toUpperCase().padEnd(10)}
       </TitleContainer>
     <ViewAllContainer onClick={() => history.push(`${match.path}/${routeName}`)}>
-      See all &#10095;
+       See all &#10095;
     </ViewAllContainer>
-    </CollectionViewAllDivContainer>
+    </CollectionViewAllContainer>
     <PreviewContainer>
       {items
-        .filter((item, idx) => idx < 8)
-          .map(item => (
-        <>
-              <CollectionItem key={item.id} item={item} />
-              <DescriptionPage key={item.id} item={item} />
-        </>
+        .filter((item, idx) => idx < 4)
+        .map(item => (
+          <CollectionItem key={item.id} item={item} />
         ))}
     </PreviewContainer>
   </CollectionPreviewContainer>
-)};
+);
 
 export default withRouter(CollectionPreview);

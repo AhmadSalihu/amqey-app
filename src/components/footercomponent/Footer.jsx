@@ -18,10 +18,8 @@ const Footer = () => {
         <li>
           <h2>Company</h2>
           <ul className="box">
-            <li><a href='/'>Career</a></li>
+            <li><a href='/'>How To Place an Order</a></li>
             <li><a href='/'>About Us</a></li>
-            <li><a href='/'>Our Services</a></li>
-            <li><a href='/'>Blog Post</a></li>
             <li><a href='/'>Contact Us</a></li>
           </ul>
         </li>
@@ -29,17 +27,16 @@ const Footer = () => {
           <h2>Vendor</h2>
           <ul className="box">
             <li><a href='/'>Vendoer register</a></li>
+            <li><a href='/'>Vendoer DashBord</a></li>
             <li><a href='/'>Vendor Login</a></li>
-            <li><a href='/'>Vendor dashBoard</a></li>
-            <li><a href='/'>Info</a></li>
+          
           </ul>
         </li>
          <li>
           <h2>Customer</h2>
           <ul className="box">
-            <li><a href='/'>Customer benefits</a></li>
-            <li><a href='/'>Promo</a></li>
-            <li><a href='/'>Register</a></li>
+            <li><a href='/'>Customer register</a></li>
+            <li><a href='/'>Sign In</a></li>
             <li><a href='/'>New Arrivals</a></li>
           </ul>
         </li>

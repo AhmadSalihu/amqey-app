@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CartIcon from '../cart-icon/cart-icon.component'
 
-import { LogoContainer, LogoImage } from '../Headercomponent/Header.styles';
 import { selectCurrentUser } from '../../redux-store/user/user.selector';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -10,6 +9,7 @@ import { signOutStart } from '../../redux-store/user/user.actions';
 
 import './box-bar.styles.css';
 
+import { LogoContainer, LogoImage } from '../Headercomponent/Header.styles';
 //value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
 
 const SearchBox = ({ currentUser, signOutStart }) => {

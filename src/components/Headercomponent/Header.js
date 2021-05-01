@@ -10,12 +10,12 @@ const Header = () => {
     <OptionLink to='/login'>Login</OptionLink>
     </SignInAndRegisterContainer>
    <OptionsContainer>
-      <OptionLink to='/tract_order'>
-      Track Order
-      </OptionLink>
       <OptionLink to='/sell_with_us'>
         Sell With Us
       </OptionLink> 
+      <OptionLink to='/tract_order'>
+      Track Order
+      </OptionLink>
       </OptionsContainer>
     </HeaderContainer>
     )

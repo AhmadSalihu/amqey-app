@@ -91,12 +91,12 @@ h2{
   /* transition: all 0.3s ease */
 }
 
-/* .socials a:hover{
+.socials a:hover{
   padding-left: 8px;
-  background-color: rgb(30, 30, 190);
-} */
+  background-color: rgb(0, 0, 255);
+}
 .socials a i{   
-  color: #e7f2f4;
+  color: #168a9e;
    padding: 10px 12px;
   font-size: 20px;
 }

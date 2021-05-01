@@ -5,24 +5,35 @@ export const HeaderContainer = styled.div`
   height: 40px;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  flex-shrink: inherit;
-  margin-bottom: 15px;
-  background-color: #f8c408;
-  color: black;
-  font-family: Open Sans Condensed;
+  margin-bottom: 20px;
+  background: goldenrod;
+
+  
+  @media screen and (min-width: 800px) {
+    height: 40px;
+  }
+ 
 `;
 
 export const SignInAndRegisterContainer = styled(Link)`
-  justify-content: space-around
+  display: flex;
+
+   @media screen and (min-width: 800px) {
+    width: 50%;
+    padding: 0;
+  }
 `
-  
+
 export const LogoContainer = styled(Link)`
-    height: 30%;
-    width: 30px;
+    height: 30px;
+    width: 100%;
     padding: 25px;
+
+   @media screen and(max-width: 800px) {
+     
+   }
+
 `;
 
 export const OptionsContainer = styled.div`
@@ -30,7 +41,12 @@ export const OptionsContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;  
+  justify-content: flex-end;
+
+   @media screen and(max-width: 800px) {
+    width: 100%;
+    display: inline-block;
+  } 
 `;
     
 export const OptionLink = styled(Link)`
@@ -42,6 +58,10 @@ export const OptionLink = styled(Link)`
 export const LogoImage = styled.img`
    width: 100px;
    height: 50px;
+
+    @media screen and(max-width: 800px) {
+    width: 80%
+  }
 `
 
 export const SubHeaderComponentStyle = styled.div`

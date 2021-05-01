@@ -10,12 +10,12 @@ import {
   CollectionFooterContainer,
   CollectionItemContainer,
   NameContainer,
-  PriceButton,
+  // PriceButton,
 } from './collectiomItem.styles';
 
 
 const CollectionItem = ({ item, addItem, history }) => {
-  const { name, price, imageUrl } = item;
+  const { name, imageUrl } = item;
 console.log(item)
   return (
     <CollectionItemContainer>
@@ -23,7 +23,6 @@ console.log(item)
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
       </CollectionFooterContainer>
-      <PriceButton>₦25|₦{price}</PriceButton>
       <AddButton onClick={() => addItem(item)} inverted>
         Add to cart
       </AddButton>

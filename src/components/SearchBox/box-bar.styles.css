@@ -1,4 +1,6 @@
 .search-header{
+  height: 100%;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -7,6 +9,11 @@
   margin-bottom: 20px;
   box-sizing: border-box;
   background-color: #ffd000;
+
+  /* @media screen and(max-width: 850px){
+    height: 80%;
+    width: auto;
+  } */
 }
 .search-box {
   -webkit-appearance: none;

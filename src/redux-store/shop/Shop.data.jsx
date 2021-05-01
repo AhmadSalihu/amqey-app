@@ -398,7 +398,7 @@ const SHOP_DATA = {
     ]
   },
   fashion: {
-    id: 7,
+    id: 9,
     title: 'Fashion',
     routeName: 'fashion',
     items: [
@@ -446,6 +446,61 @@ const SHOP_DATA = {
       },
       {
         id: 44,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      }
+    ]
+  },
+  computers: {
+    id: 10,
+    title: 'Computers',
+    routeName: 'computers',
+    items: [
+   {
+        id: 45,
+        name: 'rice',
+        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        price: 325
+      },
+      {
+        id: 46,
+        name: 'Floral T-shirt',
+        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+        price: 20
+      },
+      {
+        id: 47,
+        name: 'Black & White Longsleeve',
+        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+        price: 25
+      },
+      {
+        id: 48,
+        name: 'Pink T-shirt',
+        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+        price: 25
+      },
+      {
+        id: 49,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 50,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      },
+      {
+        id: 51,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 52,
         name: 'Burgundy T-shirt',
         imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
         price: 25

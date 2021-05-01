@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import './App.css';
 import { connect } from 'react-redux';
 import Footer from './components/footercomponent/Footer';
 import Header from './components/Headercomponent/Header';
@@ -11,13 +10,14 @@ import CheckoutPage from './Pages/homepage.compponent/checkout-page/checkout-pag
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux-store/user/user.selector';
 import SubNavigationBar from './components/subnavbar/subnavigation';
- import { checkUserSession } from './redux-store/user/user.actions'
+import { checkUserSession } from './redux-store/user/user.actions'
 import SearchBox from './components/SearchBox/SearchBox';
-import DescriptionPage from './components/description-page/description-page';
+// import DescriptionPage from './components/description-page/description-page';
 import SubHeaderComponent from './components/Headercomponent/Subheader.component';
 import VendorStepsForm from './components/Vendor-Register-form/vendor-steps.form';
 
 
+import { GlobalStyle } from './Global.styles'
 
 class App extends React.Component {
   state = {
@@ -37,15 +37,16 @@ class App extends React.Component {
 
   render() { 
     return (
-      <div> 
-        <Header  />
+      <div>
+      <GlobalStyle />  
         <SearchBox />
         <SubNavigationBar />
+        {/* <Header  /> */}
         <SubHeaderComponent />
         <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/Shop" component={Shop} />
-        <Route path='/decriptionpage/:id' component={DescriptionPage} />  
+        {/* <Route path='/decriptionpage/:id' component={DescriptionPage} />   */}
         <Route  path="/checkout" component={CheckoutPage} />
         <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/' />
         ) : (
