@@ -18,6 +18,7 @@ export const CollectionViewAllContainer = styled.div`
   margin: 3px;
 
   @media screen and(max-width: 800px) {
+	text-align: justify(center);
   display: flex;
   align-items: unset;
 

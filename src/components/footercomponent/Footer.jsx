@@ -1,10 +1,15 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 
 import './footer.styles.css';
 
 const Footer = () => { 
+  const location = useLocation()
   return (
-      <footer className="footer">
+    <>
+      {
+        location.pathname === "/cehckout" && (
+         <footer className="footer">
       <div className="footer-left">
         <img src='/favicon.ico.png' alt="" />
         <div className="socials">
@@ -44,7 +49,10 @@ const Footer = () => {
       <footer className="footer-bootom">
         <p>All right reserved &copy;Amqey2021</p>
       </footer>
-      </footer>
+      </footer>  
+        )
+      }
+     </>
   )
 }
 

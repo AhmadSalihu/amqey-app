@@ -239,12 +239,11 @@ const SubNavigationBar = () => {
 								</ul>
 							</div>
 							<div className="row">
-								<header>Health</header>
+								<header>Health Care</header>
 								<ul className="mega-links">
-									<li><a href="/">Oral Hygien Care</a></li>	
-									<li><a href="/">Skin Care</a></li>	
 									<li><a href="/">Face Protection</a></li>	
 									<li><a href="/">Hand Sanitizers</a></li>	
+									<li><a href="/">Skin Care</a></li>	
 									<li><a href="/">Labs, Safety & hand Gloves</a></li>	
 								</ul>
 							</div>
