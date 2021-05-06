@@ -1,19 +1,19 @@
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
-
+import WithSpinner from '../../components/with-spinner/with-spinner';
 import { isCollectionFetching } from '../../redux-store/shop/shop.selectors';
-import WithSpinner from '../../components/with-spinner/with-spinner'
-import CollectionOverview from './collection-overview'
+
+import CollectionDisplayMenuItem from './CollectionDisplayMenuItem';
 
 const mapStateToProps = createStructuredSelector({
 	isLoading: isCollectionFetching
 })
 
-export const CollectionsOverviewContainer = compose(
+const CollectionDisplayMenuItemContainer = compose(
 	connect(mapStateToProps),
 	WithSpinner
-)(CollectionOverview);
+)(CollectionDisplayMenuItem);
 
 
-export default CollectionsOverviewContainer;
+export default CollectionDisplayMenuItemContainer;

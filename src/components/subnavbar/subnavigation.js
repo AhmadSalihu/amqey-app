@@ -14,12 +14,12 @@ const SubNavigationBar = () => {
 			<input type="radio" name="slider" id="menu-btn" />
 			<input type="radio" name="slider" id="close-btn" />
 			<ul className="nav-links">
-				<label for="close-btn" className="btn close-btn"><i class="fas fa-times"></i></label>
+				<label htmlFor="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
 				{/* <li><a href="/shop">Categories</a></li> */}
 					<li>
 					<a href="/" className="desktop-item">Supermarket</a>
 						<input type="checkbox" id="showMega" />
-						<label for="showMega" className="mobile-item">Supermarket</label>
+						<label htmlFor="showMega" className="mobile-item">Supermarket</label>
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -73,7 +73,7 @@ const SubNavigationBar = () => {
 					<li>
 					<a href="/" className="desktop-item">Restaurants & Services</a>
 						<input type="checkbox" id="showMega" />
-          <label for="showMega" className="mobile-item">Restaurants & Servicess</label>
+          <label htmlFor="showMega" className="mobile-item">Restaurants & Servicess</label>
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -105,7 +105,7 @@ const SubNavigationBar = () => {
 					<li>
 					<a href="/" className="desktop-item">Phones & Tablets</a>
 						<input type="checkbox" id="showMega" />
-          <label for="showMega" className="mobile-item">Phones & Tablets</label>
+          <label htmlFor="showMega" className="mobile-item">Phones & Tablets</label>
 					<div className="mega-box">
 						<div className="content">
 								<div className="row">
@@ -151,7 +151,7 @@ const SubNavigationBar = () => {
 				<li>
 					<a href="/" className="desktop-item">Fashions</a>
 					<input type="checkbox" id="showMega" />
-          <label for="showMega" className="mobile-item">Fashions</label>
+          <label htmlFor="showMega" className="mobile-item">Fashions</label>
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -189,7 +189,7 @@ const SubNavigationBar = () => {
 				<li>
 					<a href="/" className="desktop-item">Computer Electronics</a>
 						<input type="checkbox" id="showMega" />
-          <label for="showMega" className="mobile-item">Computer Electronic</label>
+          <label htmlFor="showMega" className="mobile-item">Computer Electronic</label>
 					<div className="mega-box">
 						<div className="content">
 								<div className="row">
@@ -224,7 +224,7 @@ const SubNavigationBar = () => {
 					<li>
 					<a href="/" className="desktop-item">Health & Beauty</a>
 						<input type="checkbox" id="showMega" />
-          <label for="showMega" className="mobile-item">Health & Beauty</label>
+          <label htmlFor="showMega" className="mobile-item">Health & Beauty</label>
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -273,7 +273,7 @@ const SubNavigationBar = () => {
 				<li>
 					<a href="/" className="desktop-item">Home & Office</a>
 						<input type="checkbox" id="showMega" />
-          <label for="showMega" className="mobile-item">Home & Office</label>
+          <label htmlFor="showMega" className="mobile-item">Home & Office</label>
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -324,7 +324,7 @@ const SubNavigationBar = () => {
 				<li>
 					<a href="/" className="desktop-item">Accomodation & Hotel</a>
 						<input type="checkbox" id="showMega" />
-          <label for="showMega" className="mobile-item">Accomodation & Hotels</label>
+          <label htmlFor="showMega" className="mobile-item">Accomodation & Hotels</label>
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -351,7 +351,7 @@ const SubNavigationBar = () => {
 					<li>
 					<a href="/" className="desktop-item">Others</a>
 						<input type="checkbox" id="showMega" />
-          <label for="showMega" className="mobile-item">Others</label>
+          <label htmlFor="showMega" className="mobile-item">Others</label>
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -395,7 +395,7 @@ const SubNavigationBar = () => {
 					</div>
 				</li>
 			</ul>
-			<label for="menu-btn" className="btn menu-btn"><i className="fas fa-bars"></i></label>
+			<label htmlFor="menu-btn" className="btn menu-btn"><i className="fas fa-bars"></i></label>
 		</div>
 		)
 	}

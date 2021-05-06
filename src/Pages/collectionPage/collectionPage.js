@@ -10,6 +10,7 @@ import {
   CollectionItemsContainer
 } from './collectionPage.styles';
 
+
 const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
   console.log(collection);
@@ -18,7 +19,9 @@ const CollectionPage = ({ collection }) => {
       <CollectionTitle>{title}</CollectionTitle>
       <CollectionItemsContainer>
         {items.map(item => (
+
           <CollectionItem key={item.id} item={item} />
+
         ))}
       </CollectionItemsContainer>
     </CollectionPageContainer>

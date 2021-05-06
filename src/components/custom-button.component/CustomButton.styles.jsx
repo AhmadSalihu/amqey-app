@@ -22,6 +22,10 @@ const googleSignInButtonStyles = css`
     }
  `
  
+const registerButtonStyles = css`
+  background-color: gold;
+  color: #ffffff;
+`
 const invertdButtonStyles = css`
     background-color: white;
     color: black;
@@ -37,12 +41,16 @@ const invertdButtonStyles = css`
 const getButtonStyles = props => {
   if (props.isGoogleSignIn) {
     return googleSignInButtonStyles;
+  } 
+  if (props.registerButton) {
+    return registerButtonStyles;
   }
+  
   return props.inverted ? invertdButtonStyles : buttonStyles;
     }
  
 export const CustomButtonContainer = styled.button`
-  min-width: 165px;
+   min-width: 165px;
    width: auto;
    height: 50px;
    letter-spacing: 0.5px;

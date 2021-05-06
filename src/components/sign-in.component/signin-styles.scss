@@ -1,0 +1,15 @@
+body{
+	padding: 0%;
+	margin: 0%;
+}
+
+.signin{
+	width: 450px;
+
+	@media screen and(max-width: 800px) {
+		width: 450px;
+	}
+}
+.paper{
+	padding: 20px 20px;
+}

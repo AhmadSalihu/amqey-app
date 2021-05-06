@@ -1,3 +1,4 @@
+import { Paper } from '@material-ui/core';
 import React from 'react'
 import { connect } from 'react-redux';
 import { googleSignInStart, emailSignInStart } from '../../redux-store/user/user.actions';
@@ -7,9 +8,10 @@ import FormInput from '../form-input.component/form-input';
 
 import {
   SignInContainer,
-  SignInTitle,
   ButtonsBarContainer
 } from '../sign-in.component/sign-in.styles';
+
+import './signin-styles.scss';
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -39,10 +41,9 @@ class SignIn extends React.Component {
     const { googleSignInStart } = this.props;
     return (
       <SignInContainer>
-        <SignInTitle>I already have an account</SignInTitle>
+      <Paper className="paper">
         <span>Sign in with your email and password</span>
-
-        <form onSubmit={this.handleSubmit}>
+        <form className="signin" onSubmit={this.handleSubmit}>
           <FormInput
             name='email'
             type='email'
@@ -61,11 +62,12 @@ class SignIn extends React.Component {
           />
           <ButtonsBarContainer>
             <CustomButton type='submit'> Sign in </CustomButton>
-            <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn>
-              Sign with Google
+            <CustomButton type="button" onClick={googleSignInStart} isGoogleSignIn>
+                Sign In with Google
             </CustomButton>
           </ButtonsBarContainer>
-        </form>
+          </form>
+        </Paper>
       </SignInContainer>
     );
   }

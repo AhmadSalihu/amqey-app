@@ -54,7 +54,7 @@ const INITIAL_STATE = {
 		{
 			title: 'Computers',
 			imageUrl: '/amheader/computers.png',
-			id: 8,
+			id: 9,
 			size: 'large',
 			linkUrl: 'shop/computers'
 		},

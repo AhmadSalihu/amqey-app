@@ -1,23 +1,30 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Footer from './components/footercomponent/Footer';
-// import Header from './components/Headercomponent/Header';
-import Shop from './components/ShopComponent/Shop';
-import HomePage from './Pages/homepage.compponent/homepage';
-import SignInAndSignOutPage from './components/sign-in.component/sign-in-sign-up';
-import CheckoutPage from './Pages/homepage.compponent/checkout-page/checkout-page';
 import { createStructuredSelector } from 'reselect';
-import { selectCurrentUser } from './redux-store/user/user.selector';
-import SubNavigationBar from './components/subnavbar/subnavigation';
-import { checkUserSession } from './redux-store/user/user.actions'
+
+
 import SearchBox from './components/SearchBox/SearchBox';
-// import DescriptionPage from './components/description-page/description-page';
+import SubNavigationBar from './components/subnavbar/subnavigation';
 import SubHeaderComponent from './components/Headercomponent/Subheader.component';
-import VendorStepsForm from './components/Vendor-Register-form/vendor-steps.form';
+import HomePage from './Pages/homepage.compponent/homepage';
+import Shop from './components/ShopComponent/Shop';
+import CollectionItem from './components/collectionItem.component/CollectionItem';
+
+import CheckoutPage from './Pages/homepage.compponent/checkout-page/checkout-page';
+
+import { selectCurrentUser } from './redux-store/user/user.selector';
+import { checkUserSession } from './redux-store/user/user.actions'
+import SignIn from './components/sign-in.component/sign-in'
+import SignUp from './components/sign-up/sign-up.component'
+
+import Footer from './components/footercomponent/Footer';
 
 
 import { GlobalStyle } from './Global.styles'
+import VendorUserForm from './components/Vendor-Register-form/VendorUserForm';
+
+
 
 class App extends React.Component {
   state = {
@@ -37,7 +44,7 @@ class App extends React.Component {
 
   render() { 
     return (
-      <div>
+      <div> 
       <GlobalStyle />  
         <SearchBox />
         <SubNavigationBar />
@@ -45,14 +52,17 @@ class App extends React.Component {
         <SubHeaderComponent />
         <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={CollectionItem} />
         <Route path="/Shop" component={Shop} />
-        {/* <Route path="/vendor" component={VendorStepsForm} /> */}
         {/* <Route path='/decriptionpage/:id' component={DescriptionPage} />   */}
         <Route  path="/checkout" component={CheckoutPage} />
+        <Route exact path="/signup" render={() => this.props.currentUser ? (<Redirect to='/' />
+        ) : (
+              <SignUp />)} />
         <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/' />
         ) : (
-              <SignInAndSignOutPage />)} />
-        <Route exact path='/vendor' component={VendorStepsForm} />
+              <SignIn />)} />
+        <Route exact path='/vendor' component={VendorUserForm} />
         </Switch>
         <Footer />
       </div>

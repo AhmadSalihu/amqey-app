@@ -29,12 +29,12 @@ const SearchBox = ({ currentUser, signOutStart }) => {
       <div className="search-icon">
         <CartIcon />
       </div>
-        <div class="user-login">
+        <div className="user-login">
         {
           currentUser ? (
-        <Link as='div' onClick={signOutStart}><i class="fas fa-user-check"></i></Link>   
+        <Link as='div' onClick={signOutStart}><i className="fas fa-user-check"></i></Link>   
         ) : (
-        <Link to='/signin'><i class="fas fa-user"></i> Login</Link>
+        <Link to='/signin'><i className="fas fa-user"></i> Login</Link>
           )}
       </div>
     </div>

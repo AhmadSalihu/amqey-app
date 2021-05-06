@@ -14,12 +14,11 @@ import {
 } from './collectiomItem.styles';
 
 
-const CollectionItem = ({ item, addItem, history }) => {
+const CollectionItem = ({ item, addItem }) => {
   const { name, imageUrl } = item;
-console.log(item)
   return (
     <CollectionItemContainer>
-      <BackgroundImage className='image' imageUrl={imageUrl} onClick={() => history.push('/decriptionpage')} />
+      <BackgroundImage className='image' imageUrl={imageUrl} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
       </CollectionFooterContainer>

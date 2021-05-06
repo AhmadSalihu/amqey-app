@@ -1,11 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+
+import { Paper } from '@material-ui/core'
 
 import { signUpStart } from '../../redux-store/user/user.actions'
 
 import CustomButton from '../custom-button.component/CustomButton';
 import FormInput from '../form-input.component/form-input';
-import { SignUpContainer, SignUpTitle } from './sign-up.styles';
+
+
+import { SignUpContainer } from './sign-up.styles';
+import './formStyles.scss';
 
 class SignUp extends React.Component {
   constructor() {
@@ -41,9 +47,10 @@ class SignUp extends React.Component {
   
   render() {
     const { displayName, email, phoneNumber, password, confirmPassword } = this.state;
+    const { history } = this.props;
     return (
       <SignUpContainer>
-        <SignUpTitle>I do not have a account</SignUpTitle>
+      <Paper className="paper">
         <span>Sign up with your email, phone Number and password</span>
         <form className='sign-up-form' onSubmit={this.handleSubmit}>
           <FormInput
@@ -86,8 +93,18 @@ class SignUp extends React.Component {
             label='Confirm Password'
             required
           />
-          <CustomButton type='submit'>SIGN UP</CustomButton>
+          <div className="button-display">
+            <div>
+            <span  className="spantag">New To Amqey</span>
+              <CustomButton type='submit' isGoogleSignIn>SIGN UP</CustomButton>
+            </div>
+            <div>
+          <span  className="spantag">Already Have an Account</span>  
+          <CustomButton onClick={() => history.push('/signin')}>SIGN IN</CustomButton>
+          </div>
+        </div>
         </form>
+    </Paper>
       </SignUpContainer>
     );
   }
@@ -97,4 +114,4 @@ const mapDispatchToProps = dispatch => ({
   signUpStart: (userCredentials) => dispatch(signUpStart(userCredentials))
 })
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default withRouter(connect(null, mapDispatchToProps)(SignUp));

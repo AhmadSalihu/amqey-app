@@ -8,6 +8,8 @@ import { fetchCollectionsStart  } from '../../redux-store/shop/shop.actions';
 
 import './Shop.styles.scss';
 
+
+
 class Shop extends React.Component {
 
   componentDidMount() {
@@ -19,8 +21,8 @@ class Shop extends React.Component {
   render() {
     const { match } = this.props;
     return (
-     <div className="shop-page">
-        <Route exact path={`${match.path}`} component={CollectionsOverviewContainer} />
+      <div className="shop-page">
+      <Route exact path={`${match.path}`} component={CollectionsOverviewContainer} />
       <Route path={`${match.path}/:collectionId`} component={CollectionPageContainer} />
     </div>
       

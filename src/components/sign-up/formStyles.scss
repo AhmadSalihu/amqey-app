@@ -1,0 +1,23 @@
+.sign-up-form{
+	width: 450px;
+
+	@media screen and(max-width: 800px) {
+		width: 450px;
+	}
+}
+.button-display{
+	display: flex;
+	justify-content: space-between;
+}
+.spantag{
+	background-color: white;
+	color: goldenrod;
+}
+
+.spantag:hover{
+	background-color: black;
+	color: yellow;
+}
+.paper{
+	padding: 20px 20px;
+}
