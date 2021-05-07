@@ -2,9 +2,12 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 
+import './Subheader.styles.css';
+
 const SubHeader = () => {
 	return (
-					<Carousel> 
+					<Carousel style={{maxWidth: '1000px',
+    maxHeight: '460px', paddingTop:'45px', paddingBottom:'10px'}}> 
 						<Carousel.Item interval={7000}>
 					<img
 						className="d-block w-100"

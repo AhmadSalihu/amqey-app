@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom';
 import { addItem } from '../../redux-store/cart/cart.actions';
-// import DescriptionPage from '../description-page/description-page';
+
 
 import {
   AddButton,
@@ -14,11 +14,12 @@ import {
 } from './collectiomItem.styles';
 
 
-const CollectionItem = ({ item, addItem }) => {
+const CollectionItem = ({ item, addItem, history }) => {
+  console.log(item)
   const { name, imageUrl } = item;
   return (
     <CollectionItemContainer>
-      <BackgroundImage className='image' imageUrl={imageUrl} />
+      <BackgroundImage className='image' imageUrl={imageUrl} onClick={() => history.push('/descriptionpage')} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
       </CollectionFooterContainer>

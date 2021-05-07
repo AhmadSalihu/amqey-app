@@ -58,6 +58,13 @@ const INITIAL_STATE = {
 			size: 'large',
 			linkUrl: 'shop/computers'
 		},
+		{
+			title: 'Mens collection',
+			imageUrl: '/amheader/mens-fabrics.jpg',
+			id: 10,
+			size: 'large',
+			linkUrl: 'shop/mens'
+		},
 	]
 };
 

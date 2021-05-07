@@ -17,9 +17,10 @@ const SubNavigationBar = () => {
 				<label htmlFor="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
 				{/* <li><a href="/shop">Categories</a></li> */}
 					<li>
-					<a href="/" className="desktop-item">Supermarket</a>
-						<input type="checkbox" id="showMega" />
-						<label htmlFor="showMega" className="mobile-item">Supermarket</label>
+								<a href="/" className="desktop-item">Supermarket</a>
+							<label htmlFor="showMega1" className="mobile-item">Supermarket</label>
+						<input type="checkbox" class = "supermarket" id="showMega1" />
+						
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -71,12 +72,13 @@ const SubNavigationBar = () => {
 						</div>
 				</li>
 					<li>
-					<a href="/" className="desktop-item">Restaurants & Services</a>
-						<input type="checkbox" id="showMega" />
-          <label htmlFor="showMega" className="mobile-item">Restaurants & Servicess</label>
+								<a href="/" className="desktop-item">Restaurants & Services</a>
+								 <label htmlFor="showMega2" className="mobile-item">Restaurants & Servicess</label>
+						<input type="checkbox" className = "restaurants" id="showMega2" />
+         
 					<div className="mega-box">
 						<div className="content">
-							<div className="row">
+							<div className="row hideOnMobile">
 								<img src="/amheader/fast-food.jpg" alt="" />
 							</div>
 							<div className="row">
@@ -103,12 +105,13 @@ const SubNavigationBar = () => {
 					</div>
 				</li>
 					<li>
-					<a href="/" className="desktop-item">Phones & Tablets</a>
-						<input type="checkbox" id="showMega" />
-          <label htmlFor="showMega" className="mobile-item">Phones & Tablets</label>
+								<a href="/" className="desktop-item">Phones & Tablets</a>
+								<label htmlFor="showMega3" className="mobile-item">Phones & Tablets</label>
+						<input type="checkbox" id="showMega3" />
+          
 					<div className="mega-box">
 						<div className="content">
-								<div className="row">
+								<div className="row hideOnMobile">
 								<img src="/amheader/amqey-phones.jpg" alt="" />
 							</div>
 							<div className="row">
@@ -150,11 +153,11 @@ const SubNavigationBar = () => {
 				</li>
 				<li>
 					<a href="/" className="desktop-item">Fashions</a>
-					<input type="checkbox" id="showMega" />
-          <label htmlFor="showMega" className="mobile-item">Fashions</label>
+          <label htmlFor="showMega4" className="mobile-item">Fashions</label>
+					<input type="checkbox" id="showMega4" />
 					<div className="mega-box">
 						<div className="content">
-							<div className="row">
+							<div className="row hideOnMobile">
 								<img src="/amheader/mens-fabrics.jpg" alt="" />
 							</div>
 							<div className="row">
@@ -188,11 +191,11 @@ const SubNavigationBar = () => {
 				</li>
 				<li>
 					<a href="/" className="desktop-item">Computer Electronics</a>
-						<input type="checkbox" id="showMega" />
-          <label htmlFor="showMega" className="mobile-item">Computer Electronic</label>
+          <label htmlFor="showMega5" className="mobile-item">Computer Electronic</label>
+						<input type="checkbox" id="showMega5" />
 					<div className="mega-box">
 						<div className="content">
-								<div className="row">
+								<div className="row hideOnMobile">
 								<img src="/amheader/computers.png" alt="" />
 							</div>
 							<div className="row">
@@ -223,8 +226,8 @@ const SubNavigationBar = () => {
 				</li>
 					<li>
 					<a href="/" className="desktop-item">Health & Beauty</a>
-						<input type="checkbox" id="showMega" />
-          <label htmlFor="showMega" className="mobile-item">Health & Beauty</label>
+          <label htmlFor="showMega6" className="mobile-item">Health & Beauty</label>
+						<input type="checkbox" id="showMega6" />
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -272,8 +275,8 @@ const SubNavigationBar = () => {
 				</li>
 				<li>
 					<a href="/" className="desktop-item">Home & Office</a>
-						<input type="checkbox" id="showMega" />
-          <label htmlFor="showMega" className="mobile-item">Home & Office</label>
+          <label htmlFor="showMega7" className="mobile-item">Home & Office</label>
+						<input type="checkbox" id="showMega7" />
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -323,8 +326,8 @@ const SubNavigationBar = () => {
 				</li>
 				<li>
 					<a href="/" className="desktop-item">Accomodation & Hotel</a>
-						<input type="checkbox" id="showMega" />
-          <label htmlFor="showMega" className="mobile-item">Accomodation & Hotels</label>
+          <label htmlFor="showMega8" className="mobile-item">Accomodation & Hotels</label>
+						<input type="checkbox" id="showMega8" />
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">
@@ -350,8 +353,8 @@ const SubNavigationBar = () => {
 				</li>
 					<li>
 					<a href="/" className="desktop-item">Others</a>
-						<input type="checkbox" id="showMega" />
-          <label htmlFor="showMega" className="mobile-item">Others</label>
+          <label htmlFor="showMega9" className="mobile-item">Others</label>
+						<input type="checkbox" id="showMega9" />
 					<div className="mega-box">
 						<div className="content">
 							<div className="row">

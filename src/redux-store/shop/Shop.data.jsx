@@ -350,7 +350,7 @@ const SHOP_DATA = {
    {
         id: 37,
         name: 'Camo Down Vest',
-        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        imageUrl: '/amheader/amqey-phones.jpg',
         price: 325
       },
       {
@@ -460,7 +460,7 @@ const SHOP_DATA = {
    {
         id: 45,
         name: 'rice',
-        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        imageUrl: '/amheader/amqey-phones.jpg',
         price: 325
       },
       {
@@ -503,6 +503,54 @@ const SHOP_DATA = {
         id: 52,
         name: 'Burgundy T-shirt',
         imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+    },
+    {
+        id: 53,
+        name: 'rice',
+        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        price: 325
+      },
+      {
+        id: 56,
+        name: 'Floral T-shirt',
+        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+        price: 20
+      },
+      {
+        id: 57,
+        name: 'Black & White Longsleeve',
+        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+        price: 25
+      },
+      {
+        id: 58,
+        name: 'Pink T-shirt',
+        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+        price: 25
+      },
+      {
+        id: 59,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40
+      },
+      {
+        id: 60,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25
+      },
+      {
+        id: 61,
+        name: 'Jean Long Sleeve',
+        imageUrl: '/amheader/amqey-phones.jpg',
+        price: 40
+      },
+      {
+        id: 62,
+        name: 'Burgundy T-shirt',
+        imageUrl: '/amheader/computers.png',
         price: 25
       }
     ]

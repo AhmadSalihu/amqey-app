@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-
+import client from './client.js'
 import SearchBox from './components/SearchBox/SearchBox';
 import SubNavigationBar from './components/subnavbar/subnavigation';
 import SubHeaderComponent from './components/Headercomponent/Subheader.component';
@@ -12,6 +13,7 @@ import Shop from './components/ShopComponent/Shop';
 import CollectionItem from './components/collectionItem.component/CollectionItem';
 
 import CheckoutPage from './Pages/homepage.compponent/checkout-page/checkout-page';
+import DescriptionPage from './components/description-page/description-page';
 
 import { selectCurrentUser } from './redux-store/user/user.selector';
 import { checkUserSession } from './redux-store/user/user.actions'
@@ -54,7 +56,7 @@ class App extends React.Component {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/" component={CollectionItem} />
         <Route path="/Shop" component={Shop} />
-        {/* <Route path='/decriptionpage/:id' component={DescriptionPage} />   */}
+        <Route path='/decriptionpage/:collectionId' component={DescriptionPage} />  
         <Route  path="/checkout" component={CheckoutPage} />
         <Route exact path="/signup" render={() => this.props.currentUser ? (<Redirect to='/' />
         ) : (

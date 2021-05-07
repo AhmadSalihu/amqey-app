@@ -13,9 +13,8 @@ import './Shop.styles.scss';
 class Shop extends React.Component {
 
   componentDidMount() {
-    const { fetchCollectionsStart } = this.props;
-    fetchCollectionsStart();
-    console.log(fetchCollectionsStart())
+    // const { fetchCollectionsStart } = this.props;
+    // fetchCollectionsStart();
   }
 
   render() {
@@ -24,6 +23,7 @@ class Shop extends React.Component {
       <div className="shop-page">
       <Route exact path={`${match.path}`} component={CollectionsOverviewContainer} />
       <Route path={`${match.path}/:collectionId`} component={CollectionPageContainer} />
+      {/* <Route path={`${match.path}/:collectionId`} component={DiscriptionPage} /> */}
     </div>
       
     )

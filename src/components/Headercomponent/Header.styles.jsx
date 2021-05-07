@@ -8,7 +8,6 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 20px;
   background: goldenrod;
-
   
   @media screen and (min-width: 800px) {
     height: 40px;
