@@ -19,7 +19,7 @@ const SubNavigationBar = () => {
 					<li>
 								<a href="/" className="desktop-item">Supermarket</a>
 							<label htmlFor="showMega1" className="mobile-item">Supermarket</label>
-						<input type="checkbox" class = "supermarket" id="showMega1" />
+						<input type="checkbox" id="showMega1" />
 						
 					<div className="mega-box">
 						<div className="content">
@@ -74,7 +74,7 @@ const SubNavigationBar = () => {
 					<li>
 								<a href="/" className="desktop-item">Restaurants & Services</a>
 								 <label htmlFor="showMega2" className="mobile-item">Restaurants & Servicess</label>
-						<input type="checkbox" className = "restaurants" id="showMega2" />
+						<input type="checkbox" id="showMega2" />
          
 					<div className="mega-box">
 						<div className="content">
@@ -91,7 +91,7 @@ const SubNavigationBar = () => {
 									<li><a href="/">Bakery Products</a></li>	
 								</ul>
 							</div>
-							<div className="row">
+							<div className="row hideOnMobile">
 								<img src="/amheader/cash-services.jpg" alt="" />
 							</div>
 							<div className="row">
@@ -171,7 +171,7 @@ const SubNavigationBar = () => {
 									<li><a href="/">Sweater Men&Female</a></li>	
 								</ul>
 							</div>
-								<div className="row">
+								<div className="row hideOnMobile">
 								<img src="/amheader/ladies-top.jpg" alt="" />
 							</div>
 							<div className="row">
@@ -218,7 +218,7 @@ const SubNavigationBar = () => {
 									<li><a href="/">Computer Accessories</a></li>	
 								</ul>
 							</div>
-								<div className="row">
+								<div className="row hideOnMobile">
 								<img src="/amheader/flat-screen.jpg" alt="" />
 							</div>
 						</div>
@@ -303,7 +303,7 @@ const SubNavigationBar = () => {
 								</ul>
 							</div>
 							<div className="row">
-								<header className="title-header">Ofiice Items</header>
+								<header>Ofiice Items</header>
 								<ul className="mega-links">
 									<li><a href="/">Package material</a></li>	
 									<li><a href="/">Office & School</a></li>	
@@ -330,10 +330,10 @@ const SubNavigationBar = () => {
 						<input type="checkbox" id="showMega8" />
 					<div className="mega-box">
 						<div className="content">
-							<div className="row">
+							<div className="row hideOnMobile">
 								<img src="/amheader/hotel.jpg" alt="" />
 							</div>
-								<div className="row">
+								<div className="row hideOnMobile">
 								<img src="/amheader/hall-booking.png" alt="" />
 							</div>
 							<div className="row">
@@ -345,7 +345,7 @@ const SubNavigationBar = () => {
 									<li><a href="/">Hotel Lodge</a></li>	
 								</ul>
 							</div>
-								<div className="row">
+								<div className="row hideOnMobile">
 								<img src="/amheader/apartment.jpg" alt="" />
 							</div>
 						</div>

@@ -12,8 +12,10 @@ import './box-bar.styles.css';
 import { LogoContainer, LogoImage } from '../Headercomponent/Header.styles';
 //value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
 
-const SearchBox = ({ currentUser, signOutStart }) => {
-
+const SearchBox = ({ currentUser, signOutStart, searchChange }) => {
+  // if (true) {
+  //   throw new Error("Noooooooooooo");
+  // }
   return(
     <div className="search-header">
       <div>
@@ -22,7 +24,7 @@ const SearchBox = ({ currentUser, signOutStart }) => {
       </LogoContainer>
     </div>
       <div className="search-container">       
-        <input className='search-box' type="search" placeholder="Search products, brands and categories" /><br/>  
+        <input className='search-box' type="search" placeholder="Search products, brands and categories" onChange={searchChange} /><br/>  
         <button className="search-button">search</button>
         {/* <Button variant="light">Search</Button> */}
       </div>
@@ -34,7 +36,7 @@ const SearchBox = ({ currentUser, signOutStart }) => {
           currentUser ? (
         <Link as='div' onClick={signOutStart}><i className="fas fa-user-check"></i></Link>   
         ) : (
-        <Link to='/signin'><i className="fas fa-user"></i> Login</Link>
+        <Link to='/signin'><i className="fas fa-user"></i>Login</Link>
           )}
       </div>
     </div>

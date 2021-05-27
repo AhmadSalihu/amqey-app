@@ -7,16 +7,16 @@ const INITIAL_STATE = {
 			linkUrl: 'shop/hats' 
 		},
 		{
-			title: 'jackets',
+			title: 'Shawarma',
 			imageUrl: '/amqey-images/Shawarma.jpg',
 			id: 2,
-			linkUrl: 'shop/jackets'
+			linkUrl: 'shop/shawarma'
 		},
 		{
-			title: 'sneakers',
-			imageUrl: '/amqey-images/Computers.jpg',
+			title: 'Womens Shoes',
+			imageUrl: '/amheader/womens-shoes.jpg',
 			id: 3,
-			linkUrl: 'shop/sneakers'
+			linkUrl: 'shop/womens_shoes'
 		},
 		{
 			title: 'womens',
@@ -41,28 +41,24 @@ const INITIAL_STATE = {
 			title: 'cosmetics',
 			imageUrl: '/amqey-images/face-make-up.jpg',
 			id: 7,
-			size: 'large',
 			linkUrl: 'shop/cosmetics'
 		},
 		{
 			title: 'Phones',
 			imageUrl: '/amheader/amqey-phones.jpg',
 			id: 8,
-			size: 'large',
 			linkUrl: 'shop/phones'
 		},
 		{
 			title: 'Computers',
 			imageUrl: '/amheader/computers.png',
 			id: 9,
-			size: 'large',
 			linkUrl: 'shop/computers'
 		},
 		{
 			title: 'Mens collection',
 			imageUrl: '/amheader/mens-fabrics.jpg',
 			id: 10,
-			size: 'large',
 			linkUrl: 'shop/mens'
 		},
 	]

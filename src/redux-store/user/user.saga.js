@@ -74,13 +74,13 @@ export function* signInAfterSignUp({ payload: { user, additionalData } }) {
 
 }
 
-export function* signUp({ payload: {  displayName, phoneNumber, email, password } }) {
+export function* signUp({ payload: {  displayName, email, password } }) {
   try { 
     const { user } = yield auth.createUserWithEmailAndPassword(
         email,
         password
     ); 
-    yield put(signUpSuccess({ user, additionalData: { displayName, phoneNumber } }))
+    yield put(signUpSuccess({ user, additionalData: { displayName } }))
   } catch (error) {
     yield put(signUpFailure(error))
   }

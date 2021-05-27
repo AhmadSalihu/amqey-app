@@ -6,8 +6,7 @@ import './Subheader.styles.css';
 
 const SubHeader = () => {
 	return (
-					<Carousel style={{maxWidth: '1000px',
-    maxHeight: '460px', paddingTop:'45px', paddingBottom:'10px'}}> 
+					<Carousel> 
 						<Carousel.Item interval={7000}>
 					<img
 						className="d-block w-100"

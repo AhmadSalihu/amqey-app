@@ -5,6 +5,8 @@ export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
 
   @media screen and(max-width: '800px'){
     width: auto;

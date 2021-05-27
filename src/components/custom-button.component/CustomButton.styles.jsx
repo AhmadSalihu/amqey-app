@@ -29,12 +29,14 @@ const registerButtonStyles = css`
 const invertdButtonStyles = css`
     background-color: white;
     color: black;
-    border: 1px solid black;  
+    border: 1px solid black;
+
 
     &:hover {
-    background-color: black;
+    background-color: gold;
     color: white;
     border: none;
+
     }
  `;
 

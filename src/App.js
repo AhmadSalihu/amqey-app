@@ -1,19 +1,18 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import client from './client.js'
+// import client from './client.js'
+// import ErrorBoundary from './components/ErrorBoundary';
 import SearchBox from './components/SearchBox/SearchBox';
 import SubNavigationBar from './components/subnavbar/subnavigation';
 import SubHeaderComponent from './components/Headercomponent/Subheader.component';
 import HomePage from './Pages/homepage.compponent/homepage';
 import Shop from './components/ShopComponent/Shop';
-import CollectionItem from './components/collectionItem.component/CollectionItem';
+
 
 import CheckoutPage from './Pages/homepage.compponent/checkout-page/checkout-page';
-import DescriptionPage from './components/description-page/description-page';
 
 import { selectCurrentUser } from './redux-store/user/user.selector';
 import { checkUserSession } from './redux-store/user/user.actions'
@@ -25,43 +24,49 @@ import Footer from './components/footercomponent/Footer';
 
 import { GlobalStyle } from './Global.styles'
 import VendorUserForm from './components/Vendor-Register-form/VendorUserForm';
+import DetailsPage from './Pages/Details.page';
+import ProductPage from './Pages/ProductPage';
 
 
+const App = ({ checkUserSession, currentUser }) => {
+  // const [searchfield, setSearchField] = useState('');
+  // const [loading, setLoading] = useState(true);
 
-class App extends React.Component {
-  state = {
-    loading: true
-  }
-  unsubscribeFromAuth = null;
+  useEffect(() => {
+    checkUserSession();
+  }, [checkUserSession]);
 
-  componentDidMount() {
-    const { checkUserSession } = this.props;
-    checkUserSession()
-    this.setState({ loading: false })
-  }
+
  
-  // componentWillUnmount() {
-  //   this.unsubscribeFromAuth();
-  // }
+//  const onSearchChange = e => {
+//    setSearchField(e.target.value);
+//   }
 
-  render() { 
+//     const filteredProduct = collections.filter(collection => {
+//       return collection.items.map(items => {
+//         return items.name.toLowerCase().includes(searchfield.toLowerCase())
+//       })
+//     })
+  
+//   console.log(filteredProduct)
+  
     return (
       <div> 
-      <GlobalStyle />  
+      <GlobalStyle /> 
+        {/* <ErrorBoundary></ErrorBoundary> */}
         <SearchBox />
         <SubNavigationBar />
-        {/* <Header  /> */}
         <SubHeaderComponent />
         <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/" component={CollectionItem} />
-        <Route path="/Shop" component={Shop} />
-        <Route path='/decriptionpage/:collectionId' component={DescriptionPage} />  
-        <Route  path="/checkout" component={CheckoutPage} />
-        <Route exact path="/signup" render={() => this.props.currentUser ? (<Redirect to='/' />
+        <Route path="/shop" component={Shop} />
+        <Route path="/checkout" component={CheckoutPage} />
+        <Route path='/product/:id' component={DetailsPage} />  
+        <Route path='/detail/:id' component={ProductPage} />  
+        <Route exact path="/signup" render={() => currentUser ? (<Redirect to='/' />
         ) : (
               <SignUp />)} />
-        <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/' />
+        <Route exact path="/signin" render={() => currentUser ? (<Redirect to='/' />
         ) : (
               <SignIn />)} />
         <Route exact path='/vendor' component={VendorUserForm} />
@@ -70,7 +75,6 @@ class App extends React.Component {
       </div>
     );
   } 
-}
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
@@ -81,5 +85,5 @@ const mapDispatchToProps = dispatch => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
  

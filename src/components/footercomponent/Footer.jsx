@@ -1,9 +1,14 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 
 import './footer.styles.css';
 
 const Footer = () => { 
+  const location = useLocation()
   return (
+    <>
+      	{
+		location.pathname === '/' && (
       <footer className="footer">
       <div className="footer-left">
         <img src='/favicon.ico.png' alt="" />
@@ -45,6 +50,8 @@ const Footer = () => {
         <p>All right reserved &copy;Amqey2021</p>
       </footer>
       </footer>
+    )}
+    </>
   )
 }
 

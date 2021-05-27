@@ -1,18 +1,4 @@
 body{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#root{
-	height: 100%;
-}
-a{
-	list-style: none;
-	text-decoration: none;
-}
-
-a:hover{
-	text-decoration: none;
-	color: #ff8000;
+	margin: 0;
+	padding: 0;
 }

@@ -14,11 +14,8 @@ import {
 
 const CollectionPreview = ({ collection, history, match }) => {
   const { title, items, routeName } = collection;
-console.log(routeName)
-console.log(match)
-console.log(title);
-console.log(items);
-  return (
+  console.log(items)
+return (
   <CollectionPreviewContainer>
     <CollectionViewAllContainer>
     <TitleContainer>
@@ -32,10 +29,8 @@ console.log(items);
       {items
         .filter((item, idx) => idx < 4)
           .map(item => (
-        <>
-          <CollectionItem key={item.id} item={item} />
-        </>
-        ))}
+         <CollectionItem key={item.id} item={item} />
+          ))};
     </PreviewContainer>
   </CollectionPreviewContainer>
   );
