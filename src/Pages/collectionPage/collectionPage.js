@@ -15,7 +15,6 @@ import './collectionPage.styles.jsx'
 
 const CollectionPage = ({ collection }) => {
   const { items, title } = collection;
-  console.log(collection.items)
   return (
     <CollectionPageContainer>
       <CollectionTitle>{title}</CollectionTitle>

@@ -14,7 +14,6 @@ import {
 
 const CollectionPreview = ({ collection, history, match }) => {
   const { title, items, routeName } = collection;
-  console.log(items)
 return (
   <CollectionPreviewContainer>
     <CollectionViewAllContainer>

@@ -36,12 +36,11 @@ const ProductMap = () => {
     },
     mobile: {
       breakpoint: {
-        max: 570,
-        min: 0
+        max: 1000,
+        min: 770
       },
-      items: 2,
-      partialVisibilityGutter: 30,
-      slidesToSlide: 2
+      items: 4,
+      partialVisibilityGutter: 30
 			
     },
     tablet: {

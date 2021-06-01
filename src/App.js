@@ -3,9 +3,9 @@ import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-// import client from './client.js'
-// import ErrorBoundary from './components/ErrorBoundary';
-import SearchBox from './components/SearchBox/SearchBox';
+import './client.js'
+
+import SearchBox from './components/SearchBox/search-box-header';
 import SubNavigationBar from './components/subnavbar/subnavigation';
 import SubHeaderComponent from './components/Headercomponent/Subheader.component';
 import HomePage from './Pages/homepage.compponent/homepage';
@@ -23,9 +23,11 @@ import Footer from './components/footercomponent/Footer';
 
 
 import { GlobalStyle } from './Global.styles'
-import VendorUserForm from './components/Vendor-Register-form/VendorUserForm';
-import DetailsPage from './Pages/Details.page';
-import ProductPage from './Pages/ProductPage';
+
+import ProductPage from './Pages/ProductDetailPages/ProductPage';
+import DetailPage from './components/Carousel/Details.page';
+import VendorForm from './components/Vendor-Register-form/vendorForm';
+import VendorPage from './Pages/vendorPage/VendorPage';
 
 
 const App = ({ checkUserSession, currentUser }) => {
@@ -61,7 +63,7 @@ const App = ({ checkUserSession, currentUser }) => {
         <Route exact path="/" component={HomePage} />
         <Route path="/shop" component={Shop} />
         <Route path="/checkout" component={CheckoutPage} />
-        <Route path='/product/:id' component={DetailsPage} />  
+        <Route path='/product/:id' component={DetailPage} />  
         <Route path='/detail/:id' component={ProductPage} />  
         <Route exact path="/signup" render={() => currentUser ? (<Redirect to='/' />
         ) : (
@@ -69,7 +71,8 @@ const App = ({ checkUserSession, currentUser }) => {
         <Route exact path="/signin" render={() => currentUser ? (<Redirect to='/' />
         ) : (
               <SignIn />)} />
-        <Route exact path='/vendor' component={VendorUserForm} />
+        <Route path='/vendor' component={VendorForm} />
+          <Route exact path="/vendor_dashboard" component={VendorPage} /> 
         </Switch>
         <Footer />
       </div>

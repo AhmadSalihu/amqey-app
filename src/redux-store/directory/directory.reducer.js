@@ -7,13 +7,13 @@ const INITIAL_STATE = {
 			linkUrl: 'shop/hats' 
 		},
 		{
-			title: 'Shawarma',
+			title: 'mens cap',
 			imageUrl: '/amqey-images/Shawarma.jpg',
 			id: 2,
-			linkUrl: 'shop/shawarma'
+			linkUrl: 'shop/mens_cap'
 		},
 		{
-			title: 'Womens Shoes',
+			title: 'womens shoes',
 			imageUrl: '/amheader/womens-shoes.jpg',
 			id: 3,
 			linkUrl: 'shop/womens_shoes'

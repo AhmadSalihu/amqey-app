@@ -8,15 +8,14 @@ import FileInput from "./file.input";
 import './formstyles.css'
 
 
-export default function VendorUserForm() {
+const VendorForm = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => alert(JSON.stringify(data));
 
-
-  
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
-    <Paper className="paper">
+      <Paper className="paper">
+        <p className="title">Vendor Form Registeration</p>
       <input type="text" placeholder="First name" {...register("First name", {required: true, maxLength: 80})} />
       <input type="text" placeholder="Last name" {...register("Last name", {required: true, maxLength: 100})} />
       <input type="text" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
@@ -26,7 +25,7 @@ export default function VendorUserForm() {
         <option value="Male">Male</option>
         <option value="Female">Female</option>
       </select>
-      <input type="text" placeholder="Business Name" {...register("Business NAme", {required: true})} />
+      <input type="text" placeholder="Business Name" {...register("Business Name", {required: true})} />
       <select {...register("Business Type", { required: true })}>
         <option value="Limited">Limited Liability</option>
         <option value="Enterprise">Enterprise</option>
@@ -38,3 +37,5 @@ export default function VendorUserForm() {
     </form>
   );
 }
+
+export default VendorForm
