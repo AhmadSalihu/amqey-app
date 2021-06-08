@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from 'react-router-dom'
 
 export const SignInContainer = styled.div`
   display: flex;
@@ -19,5 +19,12 @@ export const SignInTitle = styled.h2`
 
 export const ButtonsBarContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  & hover{
+    border: none;
+  }
 `;
+
+export const CustomLink = styled(Link)`
+
+`; 

@@ -72,7 +72,7 @@ const App = ({ checkUserSession, currentUser }) => {
         ) : (
               <SignIn />)} />
         <Route path='/vendor' component={VendorForm} />
-          <Route exact path="/vendor_dashboard" component={VendorPage} /> 
+          <Route exact path="/dashboard" component={VendorPage} /> 
         </Switch>
         <Footer />
       </div>

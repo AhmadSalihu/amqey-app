@@ -5,7 +5,6 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { store, persistor } from './redux-store/store';
-import 'react-multi-carousel/lib/styles.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

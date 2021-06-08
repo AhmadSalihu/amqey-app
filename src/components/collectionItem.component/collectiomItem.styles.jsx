@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import CustomButton from '../custom-button.component/CustomButton';
 
 export const CollectionItemContainer = styled.div`
-  width: 22vw;
+  width: 18vw;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 250px;
   align-items: center;
   position: relative;
   &:hover {
@@ -34,7 +34,7 @@ export const AddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
   position: absolute;
-  top: 255px;
+  top: 180px;
   display: none;
 
   @media screen and (max-width: 800px) {
@@ -59,12 +59,13 @@ export const CollectionFooterContainer = styled.div`
   height: 5%;
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 0.9vw;
 `;
 
 export const NameContainer = styled.span`
-  width: 90%;
-  margin-bottom: 15px;
+  text-transform: lowercase;
+  width: auto;
+  margin-bottom: 15vw;
 `;
 
 export const PriceContainer = styled.span`

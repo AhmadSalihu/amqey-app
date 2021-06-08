@@ -1,4 +1,4 @@
-const data = {
+const PRODUCT_SLIDER = {
   products : [
     {
       id: 1,
@@ -16,7 +16,7 @@ const data = {
       id: 2,
       name: 'Beauty Make-Up',
       category: 'Slim fit',
-      imageUrl: './images/face-make-up.jpg',
+      imageUrl: '/images/face-make-up.jpg',
       price: 90,countInStock: 12,
       brand: 'Adidas',
       rating: '4.5',
@@ -112,7 +112,7 @@ const data = {
       id: 10,
       name: 'Mens Watch',
       category: 'Slim fit',
-      imageUrl: './images/mens_watch.jpg',
+      imageUrl: '/images/mens_watch.jpg',
       price: 90,countInStock: 12,
       brand: 'Adidas',
       rating: '4.5',
@@ -194,4 +194,4 @@ const data = {
   ],
 };
 
-export default data;
+export default PRODUCT_SLIDER;

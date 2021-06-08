@@ -36,7 +36,7 @@ const invertdButtonStyles = css`
     background-color: gold;
     color: white;
     border: none;
-
+    font-size: 15px;
     }
  `;
 

@@ -14,7 +14,7 @@ import './collection-overview.styles.scss';
 
 
 const CollectionOverview = ({ collections }) => {
-	console.log(collections);
+
 	return (
 		<div className='collection-overview'>
 			{
@@ -26,7 +26,7 @@ const CollectionOverview = ({ collections }) => {
 
 }
     const mapStatetoProps = createStructuredSelector({
-      collections: selectCollectionForPreview 
+			collections: selectCollectionForPreview,
 });
 
 export default connect(mapStatetoProps)(CollectionOverview)

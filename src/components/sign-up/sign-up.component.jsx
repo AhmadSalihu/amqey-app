@@ -91,7 +91,7 @@ const SignUp = ({ history, signUpStart }) => {
             <span  className="spantag">New To Amqey</span>
               <CustomButton type='submit' isGoogleSignIn>SIGN UP</CustomButton>
             </div>
-            <div>
+          <div>
           <span  className="spantag">Already Have an Account</span>  
           <CustomButton onClick={() => history.push('/signin')}>SIGN IN</CustomButton>
           </div>

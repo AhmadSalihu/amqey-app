@@ -12,8 +12,9 @@ import {
 } from '../sign-in.component/sign-in.styles';
 
 import './signin-styles.scss';
+import { withRouter } from 'react-router-dom';
 
-const SignIn = ({ googleSignInStart, emailSignInStart }) => {
+const SignIn = ({ googleSignInStart, emailSignInStart, history }) => {
   const [userCredentials, setUserCredentials] = useState({
     email: '',
     password: ''
@@ -55,9 +56,14 @@ const SignIn = ({ googleSignInStart, emailSignInStart }) => {
             required
           />
           <ButtonsBarContainer>
-            <CustomButton type='submit'> Sign in </CustomButton>
+              <CustomButton type='submit'> Sign in </CustomButton>
+              <br/>
             <CustomButton type="button" onClick={googleSignInStart} isGoogleSignIn>
                 Sign In with Google
+            </CustomButton>
+              <br/>
+            <CustomButton type="button" href="/signup" onClick={() => history.push('/signup')} registerButton>
+                New on Amqey Sign Up
             </CustomButton>
           </ButtonsBarContainer>
           </form>
@@ -71,4 +77,4 @@ const mapDispatchToProps = dispatch => ({
   emailSignInStart: (email, password) => dispatch(emailSignInStart({ email, password}))
 })
 
-export default connect(null, mapDispatchToProps)(SignIn);
+export default withRouter(connect(null, mapDispatchToProps)(SignIn));

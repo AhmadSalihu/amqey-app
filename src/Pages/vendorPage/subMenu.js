@@ -25,25 +25,27 @@ margin-left: 16px;
 
 const DropdownLink = styled(Link)`
 background: #414757;
-height: 60px;
+height: 50px;
+padding-left: 3rem;
 display: flex;
 align-item: center;
 text-decoration: none;
 color: #f5f5f5;
-
+font-size: 16px;
 &:hover{
 	background: #252831;
 	cursor: pointer;
+	border-left: 6px solid #ff8000;
 }
 `;
 
 const SubMenu = ({ item }) => {
 	const [subnav, setSubnav] = useState(false)
 
-	const showSubNav = () => setSubnav(!subnav);
+	const showSubnav = () => setSubnav(!subnav);
 	return (
 		<>
-			<SidebarLink to={item.path} onClick={item.subNav && showSubNav}>
+			<SidebarLink onClick={item.subNav && showSubnav}>
 				<div>
 					{item.icon}
 					<SidebarLabel>{item.title}</SidebarLabel>

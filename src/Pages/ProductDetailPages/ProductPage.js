@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
+import { addItem } from '../../redux-store/cart/cart.actions';
 import PRODUCT_DATA from './productData'
 
-import './detail.styles.css';
+import './ProductDetails-Page.styles.css';
 
-const ProductPage = ({ match }) => {
+const ProductPage = ({ match, addItem }) => {
 	const data = PRODUCT_DATA;
 	const product = data.items.find((item) => item.id === Number(match.params.id))
-
+	const { imageUrl, name, price, description, countInStock } = product;
 	if (!product) {
 		return (
 			<h3>Product Not Found</h3>
@@ -19,15 +21,15 @@ const ProductPage = ({ match }) => {
 			<Link to="/shop">Back to shop</Link>
 			<div className="row top">
 				<div className="col-one">
-					<img className="medium" src={product.imageUrl} alt={product.name} />
+					<img className="medium" src={imageUrl} alt={name} />
 				</div>
 				<div className="col-two body">
 					<ul>
 						<li>
-							<h1>{product.name}</h1>
+							<h1>{name}</h1>
 						</li>
-						<li>Price: ₦{product.price}</li>
-						<li>Description: {product.description}</li>
+						<li>Price: ₦{price}</li>
+						<li>Description: {description}</li>
 					</ul>
 				</div>
 				<div className="col-one card">
@@ -36,13 +38,13 @@ const ProductPage = ({ match }) => {
 							<li>
 								<div className="row">
 									<div>Price</div>
-									<div className="price">₦{product.price}</div>
+									<div className="price">₦{price}</div>
 								</div>
 							</li>
 							<li>
 								<div className="row">
 									<div>Status</div>
-									<div>{product.countInStock > 0 ? (
+									<div>{countInStock > 0 ? (
 										<span className="success">IN STOCK</span>
 									) : (
 											<span className="error">Unavailbale</span>
@@ -51,7 +53,7 @@ const ProductPage = ({ match }) => {
 								</div>
 							</li>
 							<li>
-								<button className="primary block">Add to Cart</button>
+								<button className="primary block" onClick={() => addItem(product)}>Add to Cart</button>
 							</li>
 						</ul>
 					</div>	
@@ -61,5 +63,10 @@ const ProductPage = ({ match }) => {
 	)
 }
 
+const mapDispatchToProps = dispatch => ({
+  addItem: product => dispatch(addItem(product))
+});
 
-export default ProductPage;
+export default withRouter(connect(
+	null,
+	mapDispatchToProps)(ProductPage));

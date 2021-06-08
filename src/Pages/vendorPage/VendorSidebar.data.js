@@ -9,7 +9,7 @@ import * as SiIcons from 'react-icons/si'
 export const sidebarData = [
 	{
 		title: 'Product',
-		// path: '/overview',
+		path: '/overview',
 		icon: <FaIcons.FaCartPlus />,
 		iconClosed: <RiIcons.RiArrowDownSFill />,
 		iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -33,7 +33,7 @@ export const sidebarData = [
 	},
 	{
 		title: 'Order',
-		// path: '/reports',
+		path: '/reports',
 		icon: <RiIcons.RiOrderPlayFill />,
 		iconClosed: <RiIcons.RiArrowDownSFill />,
 		iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -54,7 +54,7 @@ export const sidebarData = [
 	},
 	{
 		title: 'Business',
-		// path: '/reports',
+		path: '/reports',
 		icon: <IoIcons.IoMdBusiness />,
 		iconClosed: <RiIcons.RiArrowDownSFill />,
 		iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -75,7 +75,7 @@ export const sidebarData = [
 	},
 	{
 		title: 'Payouts',
-		// path: '/reports',
+		path: '/reports',
 		icon: <SiIcons.SiSamsungpay />,
 		iconClosed: <RiIcons.RiArrowDownSFill />,
 		iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -96,7 +96,7 @@ export const sidebarData = [
 	},
 	{
 		title: 'Profile',
-		// path: '/reports',
+		path: '/reports',
 		icon: <CgIcons.CgProfile />,
 		iconClosed: <RiIcons.RiArrowDownSFill />,
 		iconOpened: <RiIcons.RiArrowUpSFill />,

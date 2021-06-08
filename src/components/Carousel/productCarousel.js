@@ -5,8 +5,7 @@ import { addItem } from '../../redux-store/cart/cart.actions'
 
 import './carousel.Card.styles.css'
 
-const ProductCarousel = (props) => {
-	const { addItem, item } = props;
+const ProductCarousel = ({ addItem, item }) => {
 	const { name, price, imageUrl } = item;
 
 return (

@@ -10,12 +10,12 @@ import {
   CollectionFooterContainer,
   CollectionItemContainer,
   NameContainer,
-  // PriceButton,
+  PriceContainer,
 } from './collectiomItem.styles';
 
 
 const CollectionItem = ({ item, addItem, history }) => { 
-  const { name, imageUrl } = item;
+  const { name, imageUrl, price } = item;
 // console.log(`${match.path}/${item.id}`)
   return (
     <>
@@ -23,6 +23,7 @@ const CollectionItem = ({ item, addItem, history }) => {
       <BackgroundImage className='image' imageUrl={imageUrl} onClick={() => history.push(`/detail/${item.id}`)} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
+          <PriceContainer>₦{price}</PriceContainer>  
       </CollectionFooterContainer>
       <AddButton onClick={() => addItem(item)} inverted>
         Add to cart

@@ -1,12 +1,14 @@
 import React from 'react'
 import ProductCarousel from './productCarousel'
 import Carousel from 'react-multi-carousel';
-import data from './productData'
-
 import 'react-multi-carousel/lib/styles.css';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { sliderProduct } from '../../redux-store/product-slider/product-slider.selectors';
 	
 
-const ProductMap = () => {
+const ProductMap = ({ products }) => {
+  
 	return (
 		<Carousel
 	additionalTransfrom={0}
@@ -15,7 +17,7 @@ const ProductMap = () => {
 	autoPlay={true}		
   centerMode={false}
   className=""
-  containerClass="container"
+  containerClass="carousel-container"
   dotListClass=""
   draggable
   focusOnSelect={false}
@@ -39,7 +41,7 @@ const ProductMap = () => {
         max: 1000,
         min: 770
       },
-      items: 4,
+      items: 2,
       partialVisibilityGutter: 30
 			
     },
@@ -58,7 +60,7 @@ const ProductMap = () => {
   swipeable
 >
 			{
-				data.products.map(item => (
+				products.products.map(item => (
 					<ProductCarousel key={item.id} item={item} />
 				))
 			}
@@ -66,4 +68,8 @@ const ProductMap = () => {
 	)
 }
 
-export default ProductMap
+const mapStateToProps = createStructuredSelector({
+  products: sliderProduct,
+});
+
+export default connect(mapStateToProps)(ProductMap);

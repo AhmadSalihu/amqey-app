@@ -70,6 +70,7 @@ h2{
   color: #ffffff;
   padding: 8px;
   text-decoration: none;
+  margin-left: 2px solid #ff8000;
 }
 .footer-bottom{
   text-align: center;
@@ -82,24 +83,22 @@ h2{
 }
 
 .socials a{
-  background-color: #b2b6bb;
-  width: 40px;
-  height: 40px;
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;;
   text-decoration: none;
   display: inline-block;
   margin-right: 10px;
   /* transition: all 0.3s ease */
 }
 
-.socials a:hover{
-  padding-left: 8px;
-  background-color: rgb(20, 20, 100);
+.gr,
+.fa{
+  width: 30px;
+  height: auto;
 }
-.socials a i{   
-  color: #168a9e;
-   padding: 10px 12px;
-  font-size: 20px;
-}
+/*  */
 @media screen and (min-width: 600px){
   .footer-right > *{
     flex: 1;

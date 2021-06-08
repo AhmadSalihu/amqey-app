@@ -1,8 +1,10 @@
 import shopActionType from "./shop.types";
-import SHOP_DATA from './Shop.data'
+import SHOP_DATA from './Shop.data';
+import  PRODUCT_DETAILS from './shop_Detetails_Page.data.'
 
 const INITIAL_STATE = {
 	collections: SHOP_DATA,
+	items:  PRODUCT_DETAILS,
 	isFetching: false,
 	errorMessage: undefined
 };

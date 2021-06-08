@@ -1,21 +1,25 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CartIcon from '../cart-icon/cart-icon.component'
+
+import * as TiIcons from 'react-icons/ti';
+import * as BiIcons from 'react-icons/bi';
+import * as BsIcons from 'react-icons/bs';
 
 import { selectCurrentUser } from '../../redux-store/user/user.selector';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { signOutStart } from '../../redux-store/user/user.actions';
 
-import './search-box-header.styles.css';
 import { LogoContainer, LogoImage } from '../Headercomponent/Header.styles';
 
+import './search-box-header.styles.scss';
+
+
 const SearchBox = ({ currentUser, signOutStart, searchChange }) => {
-  const location = useLocation();
 
   return (
     <>
-      {location.pathname === '/' && (
       <div className="search-header">
         <div>
         <LogoContainer to='/'>
@@ -23,22 +27,22 @@ const SearchBox = ({ currentUser, signOutStart, searchChange }) => {
         </LogoContainer>
       </div>
         <div className="search-container">       
-          <input className='search-box' type="search" placeholder="Search products, brands and categories" onChange={searchChange} /><br/>  
-          <button className="search-button">search</button>
+          <input className='search-box' type="search" placeholder="Search products, brands and categories" />
+          {/* <BsIcons.BsSearch /> */} {/* <FiIcons.FiSearch className="fi" /> */} 
+          <div as="button" className="search-button">search</div>
         </div>
         <div className="search-icon">
-          <CartIcon />
+         <CartIcon />
         </div>
           <div className="user-login">
           {
             currentUser ? (
-          <Link as='div' onClick={signOutStart}><i className="fas fa-user-check"></i></Link>   
+          <Link as='div' onClick={signOutStart}><TiIcons.TiUserAdd  className='ti'/></Link>   
           ) : (
-          <Link to='/signin'><i className="fas fa-user"></i>Login</Link>
+          <Link to='/signin'><BiIcons.BiUserPlus className='bi'/></Link>
             )}
         </div>
-        </div>
-      )}  
+        </div> 
     </>
   )
 }

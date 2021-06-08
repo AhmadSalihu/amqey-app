@@ -12,7 +12,7 @@ const HomePage = () => (
     <div className="homepage">
     <Directory />
     <br></br>
-    <ProductMap />
+    {/* <ProductMap /> */}
       </div>
     )
 

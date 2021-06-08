@@ -2,6 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import CollectionItem from '../collectionItem.component/CollectionItem';
 
+import * as FaIcons from 'react-icons/fa';
+
 import {
   CollectionPreviewContainer,
   TitleContainer,
@@ -21,15 +23,15 @@ return (
       {title.toUpperCase()}
       </TitleContainer>
     <ViewAllContainer onClick={() => history.push(`${match.path}/${routeName}`)}>
-       See all &#10095;
+      See all<FaIcons.FaAngleRight />
     </ViewAllContainer>
     </CollectionViewAllContainer>
     <PreviewContainer>
       {items
-        .filter((item, idx) => idx < 4)
+        .filter((item, idx) => idx < 5)
           .map(item => (
          <CollectionItem key={item.id} item={item} />
-          ))};
+          ))}
     </PreviewContainer>
   </CollectionPreviewContainer>
   );

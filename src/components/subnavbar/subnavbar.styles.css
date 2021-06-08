@@ -12,10 +12,10 @@ nav{
   background: goldenrod;
   z-index: 99;
 
-  /* @media screen and(max-width: 850px) {
+ @media screen and(max-width: 850px) {
   height: 50px;
   padding: 100%;
-  } */
+  }
 }
 nav .wrapper{
   position: relative;
@@ -119,18 +119,18 @@ nav .wrapper{
   display: flex;
   justify-content: space-between;
 }
-/* header{
+header{
   border-bottom: 1px solid rgba(0,0,0,0.16);
   margin-bottom: 10px;
 }
 li header{
   margin-top: -10px;
   margin-bottom: -10px;
-} */
-/* .row .mega-links{
+}
+ .row .mega-links{
 place-items: flex-start;
 justify-content: flex-start;
-} */
+}
 .content .row .mega-links{
   display: contents;
   margin-left: -40px;
@@ -234,9 +234,9 @@ justify-content: flex-start;
     transition: all 0.1s ease;
   }
 
-  /* #showMega:checked ~ .mega-box{
+  #showMega:checked ~ .mega-box{
     max-height: 100%;
-  } */
+  }
 
   .showItems{
     max-height: 100% !important;
